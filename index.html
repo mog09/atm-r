@@ -1,0 +1,1550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ATM-R | Aviation Talent Recruitment</title>
+<meta name="description" content="ATM-R is a specialist recruitment agency for Air Traffic Management. We connect ANSPs, airports and aviation organisations with experienced ATM professionals worldwide.">
+<link rel="canonical" href="https://www.atm-r.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.atm-r.com/">
+<meta property="og:title" content="ATM-R | Aviation Talent Recruitment">
+<meta property="og:description" content="Specialist recruitment for Air Traffic Management — connecting organisations with experienced ATM professionals worldwide.">
+<meta property="og:image" content="https://www.atm-r.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ATM-R | Aviation Talent Recruitment">
+<meta name="twitter:description" content="Specialist recruitment for Air Traffic Management — connecting organisations with experienced ATM professionals worldwide.">
+<meta name="twitter:image" content="https://www.atm-r.com/og-image.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%234f46e5'/><path d='M4 20l6-12 7 9 4-6 7 9H4z' fill='white'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;
+  --indigo:#0284c7;
+  --indigo-dark:#0369a1;
+  --indigo-light:#38bdf8;
+  --indigo-dim:rgba(2,132,199,0.08);
+  --text-100:#0f172a;
+  --text-300:#64748b;
+  --text-500:#94a3b8;
+  --font:'Inter',system-ui,sans-serif;
+  --nav-h:68px;
+  --max-w:1160px;
+  --px:clamp(20px,4vw,48px);
+  --radius:18px;
+  --radius-sm:12px;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--text-100);line-height:1.6;-webkit-font-smoothing:antialiased;background:#fff}
+
+/* ── SEAMLESS PAGE BACKGROUND ─────────────────────────────── */
+.page-bg{
+  position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(ellipse 40% 20% at 6% 12%,  rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.0) 100%),
+    radial-gradient(ellipse 30% 15% at 20% 8%,  rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.0) 100%),
+    radial-gradient(ellipse 24% 13% at 32% 14%,  rgba(255,255,255,0.82) 0%, rgba(255,255,255,0.0) 100%),
+    radial-gradient(ellipse 44% 22% at 74% 7%,   rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.0) 100%),
+    radial-gradient(ellipse 32% 16% at 87% 13%,  rgba(255,255,255,0.87) 0%, rgba(255,255,255,0.0) 100%),
+    radial-gradient(ellipse 22% 11% at 60% 17%,  rgba(255,255,255,0.72) 0%, rgba(255,255,255,0.0) 100%),
+    radial-gradient(ellipse 36% 18% at 46% 26%,  rgba(255,255,255,0.62) 0%, rgba(255,255,255,0.0) 100%),
+    radial-gradient(ellipse 26% 13% at 14% 30%,  rgba(255,255,255,0.52) 0%, rgba(255,255,255,0.0) 100%),
+    radial-gradient(ellipse 42% 20% at 92% 28%,  rgba(255,255,255,0.47) 0%, rgba(255,255,255,0.0) 100%),
+    linear-gradient(180deg,
+      #6aaee8 0%, #88c1f0 5%, #a3d0f4 11%, #badbf6 18%,
+      #cde6f8 26%, #ddeefb 34%, #e9f3fc 42%, #f2f8fd 50%,
+      #f9fbfe 57%, #ffffff 64%, #ffffff 100%
+    );
+}
+
+/* ── NAV ──────────────────────────────────────────────────── */
+.nav{
+  position:fixed;top:16px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 32px);max-width:980px;height:var(--nav-h);
+  background:rgba(255,255,255,0.84);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,0.65);
+  border-radius:var(--radius);
+  box-shadow:0 4px 32px rgba(0,0,0,0.08),0 1px 0 rgba(255,255,255,0.8) inset;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 26px;z-index:1000;
+  transition:box-shadow .3s;
+}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nav-logo-mark{width:34px;height:34px;background:var(--indigo);border-radius:9px;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(79,70,229,0.4)}
+.nav-logo-mark svg{width:18px;height:18px;fill:#fff}
+.nav-logo-text{font-size:1.05rem;font-weight:800;color:var(--text-100);letter-spacing:-0.03em}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{font-size:.875rem;font-weight:500;color:var(--text-300);text-decoration:none;transition:color .2s;letter-spacing:-0.01em}
+.nav-links a:hover{color:var(--text-100)}
+.nav-cta{background:var(--indigo);color:#fff;padding:9px 22px;border-radius:10px;font-size:.875rem;font-weight:600;text-decoration:none;transition:background .2s,transform .15s,box-shadow .2s;box-shadow:0 2px 8px rgba(79,70,229,0.3)}
+.nav-cta:hover{background:var(--indigo-dark);transform:translateY(-1px);box-shadow:0 4px 14px rgba(79,70,229,0.4)}
+.nav-mobile-btn{display:none;background:none;border:none;cursor:pointer;padding:4px}
+.nav-mobile-btn span{display:block;width:22px;height:2px;background:var(--text-100);margin:5px 0;transition:.3s}
+
+/* ── HERO ─────────────────────────────────────────────────── */
+#hero{
+  min-height:100vh;background:transparent;
+  display:flex;flex-direction:column;align-items:center;
+  padding-top:calc(var(--nav-h) + 96px);
+  padding-bottom:0;overflow:hidden;
+}
+.hero-inner{
+  text-align:center;max-width:820px;
+  padding:0 var(--px);margin-bottom:72px;
+}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.72rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--indigo);background:rgba(79,70,229,0.08);
+  padding:7px 18px;border-radius:100px;margin-bottom:32px;
+  border:1px solid rgba(79,70,229,0.14);
+}
+.hero-h1{
+  font-size:clamp(2.4rem,5vw,3.8rem);font-weight:700;
+  line-height:1.12;letter-spacing:-0.02em;
+  color:var(--text-100);margin-bottom:26px;
+  white-space:nowrap;
+}
+@media(max-width:600px){.hero-h1{white-space:normal}}
+/* Lighter connecting words feel editorial, not AI-generated */
+.hero-h1 .light-word{
+  font-weight:400;color:#64748b;letter-spacing:0;
+}
+.hero-h1 .accent{
+  font-weight:800;
+  color:var(--indigo);
+  background:linear-gradient(135deg,#4f46e5,#818cf8);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-sub{
+  font-size:1.125rem;color:var(--text-300);line-height:1.78;
+  max-width:680px;margin:0 auto 44px;font-weight:400;
+}
+.hero-btns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap}
+.btn-primary{
+  background:var(--indigo);color:#fff;
+  padding:15px 36px;border-radius:var(--radius-sm);
+  font-size:.975rem;font-weight:700;text-decoration:none;letter-spacing:-0.01em;
+  transition:background .2s,transform .15s,box-shadow .2s;display:inline-block;
+  box-shadow:0 4px 18px rgba(79,70,229,0.38),0 1px 0 rgba(255,255,255,0.2) inset;
+}
+.btn-primary:hover{background:var(--indigo-dark);transform:translateY(-2px);box-shadow:0 8px 24px rgba(79,70,229,0.48)}
+.btn-ghost{
+  background:rgba(255,255,255,0.72);color:var(--text-100);
+  padding:15px 36px;border-radius:var(--radius-sm);
+  font-size:.975rem;font-weight:600;text-decoration:none;letter-spacing:-0.01em;
+  border:1.5px solid rgba(0,0,0,0.09);
+  backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  transition:border-color .2s,transform .15s,background .2s,box-shadow .2s;display:inline-block;
+  box-shadow:0 2px 8px rgba(0,0,0,0.04);
+}
+.btn-ghost:hover{border-color:var(--indigo);background:rgba(255,255,255,0.92);transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+
+/* ── SCROLL CARD (Aceternity ContainerScroll) ─────────────── */
+.scroll-container{
+  width:100%;display:flex;justify-content:center;
+  padding:0 var(--px);perspective:1200px;
+}
+.scroll-card{
+  width:100%;max-width:920px;
+  transform-origin:top center;
+  transform:rotateX(18deg) scale(1.04);
+  transition:transform 0.08s linear;
+  will-change:transform;
+}
+.scroll-card-inner{
+  background:#fff;border-radius:22px 22px 0 0;
+  border:2.5px solid #2d2d2d;overflow:hidden;
+  box-shadow:0 0 #0000004d,0 9px 20px #0000004a,0 37px 37px #00000042,0 84px 50px #00000026,0 149px 60px #0000000a,0 233px 65px #00000003;
+}
+
+/* ── DASHBOARD MOCK ───────────────────────────────────────── */
+.hc-inner{display:flex;height:440px;font-size:.75rem;background:#f8f9fb}
+.hc-sidebar{
+  width:190px;flex-shrink:0;background:#1e1b4b;
+  padding:20px 16px;display:flex;flex-direction:column;gap:4px;
+}
+.hc-sidebar-logo{
+  font-size:.88rem;font-weight:800;color:#fff;
+  margin-bottom:20px;display:flex;align-items:center;gap:8px;letter-spacing:-0.02em;
+}
+.hc-sidebar-logo span{
+  background:var(--indigo);width:26px;height:26px;border-radius:7px;
+  display:flex;align-items:center;justify-content:center;font-size:.72rem;
+}
+.sb-item{
+  display:flex;align-items:center;gap:10px;
+  padding:9px 11px;border-radius:9px;color:rgba(255,255,255,.55);
+  font-size:.73rem;font-weight:500;cursor:default;transition:all .15s;
+}
+.sb-item.active{background:rgba(255,255,255,.13);color:#fff}
+.sb-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.hc-main{flex:1;padding:18px;display:flex;flex-direction:column;gap:14px;overflow:hidden}
+.hc-topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:2px}
+.hc-topbar-title{font-size:.84rem;font-weight:800;color:var(--text-100);letter-spacing:-0.02em}
+.hc-badge{
+  background:rgba(79,70,229,.1);color:var(--indigo);
+  font-size:.62rem;font-weight:700;padding:4px 10px;border-radius:100px;
+  letter-spacing:.05em;text-transform:uppercase;
+}
+.hc-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.kpi{background:#fff;border-radius:11px;padding:11px 13px;border:1px solid #eaecf0;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+.kpi-label{font-size:.61rem;font-weight:600;color:var(--text-300);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
+.kpi-val{font-size:1.15rem;font-weight:800;color:var(--text-100);letter-spacing:-0.02em}
+.kpi-delta{font-size:.62rem;font-weight:600;margin-top:2px}
+.kpi-delta.up{color:#16a34a}.kpi-delta.dn{color:#dc2626}
+.hc-charts{display:grid;grid-template-columns:2fr 1fr;gap:10px;flex:1;min-height:0}
+.hc-chart-box{background:#fff;border-radius:11px;padding:11px 13px;border:1px solid #eaecf0;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+.hc-chart-title{font-size:.65rem;font-weight:700;color:var(--text-300);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+
+/* ── STATS ────────────────────────────────────────────────── */
+.stats{background:transparent;padding:80px var(--px)}
+.stats-inner{max-width:var(--max-w);margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid rgba(79,70,229,0.1);border-radius:var(--radius);background:rgba(255,255,255,0.72);backdrop-filter:blur(12px);overflow:hidden}
+.stat-item{padding:36px 32px;text-align:center;border-right:1px solid rgba(79,70,229,0.08)}
+.stat-item:last-child{border-right:none}
+.stat-num{font-size:2.8rem;font-weight:900;letter-spacing:-0.04em;color:var(--indigo);line-height:1}
+.stat-label{font-size:.875rem;color:var(--text-300);font-weight:500;margin-top:6px;letter-spacing:-0.01em}
+
+/* ── SECTION COMMON ───────────────────────────────────────── */
+.section{padding:100px var(--px);background:transparent}
+.section-inner{max-width:var(--max-w);margin:0 auto}
+.section-eyebrow{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--indigo);background:rgba(79,70,229,0.08);
+  padding:5px 14px;border-radius:100px;margin-bottom:18px;
+  border:1px solid rgba(79,70,229,0.12);
+}
+.section-h2{font-size:clamp(1.9rem,3.8vw,2.75rem);font-weight:800;letter-spacing:-0.032em;line-height:1.12;margin-bottom:16px;color:var(--text-100)}
+.section-sub{font-size:1.025rem;color:var(--text-300);max-width:520px;margin-bottom:56px;line-height:1.72}
+
+/* ── WHAT WE DO (feature cards) ──────────────────────────── */
+.feat-section-header{text-align:center;max-width:660px;margin:0 auto 64px}
+.feat-section-header .section-sub{margin-bottom:0}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.feat-card{
+  background:rgba(255,255,255,0.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.75);border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:0 2px 16px rgba(79,70,229,0.06),0 0 0 1px rgba(0,0,0,0.03);
+  transition:box-shadow .25s,transform .25s;
+  display:flex;flex-direction:column;
+}
+.feat-card:hover{box-shadow:0 12px 40px rgba(0,0,0,0.11),0 0 0 1px rgba(79,70,229,0.08);transform:translateY(-6px)}
+.feat-card-img{height:230px;overflow:hidden;flex-shrink:0;display:flex;align-items:flex-end;padding:22px 22px 0;position:relative}
+.feat-card-body{padding:24px 26px 28px}
+.feat-card-body h3{font-size:1.05rem;font-weight:700;margin-bottom:9px;letter-spacing:-0.02em}
+.feat-card-body p{font-size:.9rem;color:var(--text-300);line-height:1.65}
+
+/* feat mock panels */
+.feat-mock{border-radius:11px 11px 0 0;padding:14px 16px 0;width:100%;background:#fff;box-shadow:0 -4px 16px rgba(0,0,0,0.08);}
+.fm-label{font-size:9.5px;font-weight:700;color:#9ca3af;text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px}
+.fm-big{font-size:30px;font-weight:900;color:#111827;letter-spacing:-0.04em;line-height:1;margin-bottom:4px}
+.fm-row{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px solid #f3f4f6}
+.fm-row:last-child{border-bottom:none}
+.fm-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.fm-name{font-size:11.5px;font-weight:600;color:#111827;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fm-meta{font-size:10px;color:#9ca3af}
+.fm-badge{font-size:9px;font-weight:700;padding:2px 7px;border-radius:999px;white-space:nowrap}
+.fm-match-row{display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid #f0fdf4}
+.fm-match-row:last-child{border-bottom:none;padding-bottom:0}
+.fm-avatar{width:29px;height:29px;border-radius:50%;display:grid;place-items:center;font-size:9px;font-weight:800;color:#fff;flex-shrink:0}
+.fm-check-row{display:flex;align-items:center;gap:7px;margin-bottom:6px}
+.fm-check-icon{width:19px;height:19px;border-radius:5px;display:grid;place-items:center;font-size:10px;font-weight:700;flex-shrink:0}
+
+/* ── GLOBE SECTION ────────────────────────────────────────── */
+.globe-section{background:transparent;padding:100px var(--px) 20px;overflow:hidden}
+.globe-inner{max-width:1400px;margin:0 auto;display:grid;grid-template-columns:420px 1fr;align-items:center;gap:48px}
+.globe-text{max-width:420px}
+.globe-text .section-h2{text-align:left;margin-bottom:20px}
+.globe-text .section-eyebrow{margin-bottom:20px}
+.globe-text p{text-align:left;font-size:1.025rem;color:var(--text-300);line-height:1.75;margin-bottom:32px}
+.globe-stat-row{display:flex;gap:32px;margin-top:8px}
+.globe-stat{display:flex;flex-direction:column;gap:3px}
+.globe-stat strong{font-size:1.9rem;font-weight:900;color:var(--indigo);letter-spacing:-0.04em;line-height:1}
+.globe-stat span{font-size:.82rem;color:var(--text-300);font-weight:500}
+#globeCanvas{width:min(800px,100%);height:min(800px,100vw);display:block;margin:0 auto}
+@media(max-width:900px){
+  .globe-inner{grid-template-columns:1fr;text-align:center}
+  .globe-text{max-width:100%}
+  .globe-text .section-h2,.globe-text p,.globe-text .section-eyebrow{text-align:center}
+  .globe-stat-row{justify-content:center}
+  #globeCanvas{width:min(600px,100%);height:min(600px,100vw)}
+}
+
+/* ── REGISTER ─────────────────────────────────────────────── */
+.reg-section{
+  background:transparent;
+  padding:100px var(--px) 100px;
+  position:relative;z-index:1;
+  overflow:hidden;
+}
+.reg-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1}
+.reg-header{text-align:center;margin-bottom:56px}
+.reg-header .section-sub{color:var(--text-300);margin:0 auto}
+.reg-pill{
+  display:inline-flex;align-items:center;
+  background:rgba(255,255,255,0.7);border-radius:100px;
+  padding:5px;gap:3px;
+  backdrop-filter:blur(10px);border:1px solid rgba(0,0,0,.08);
+  box-shadow:0 2px 10px rgba(0,0,0,.06);
+}
+.reg-pill button{
+  border:none;cursor:pointer;padding:10px 30px;border-radius:100px;
+  font-size:.875rem;font-weight:600;transition:all .2s;
+  background:transparent;color:var(--text-300);font-family:var(--font);
+}
+.reg-pill button.active{background:var(--indigo);color:#fff;box-shadow:0 2px 12px rgba(79,70,229,.35)}
+.reg-two-col{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+@media(max-width:860px){.reg-two-col{grid-template-columns:1fr;gap:40px}}
+.reg-left{}
+.reg-feature{display:flex;gap:16px;padding:22px 0;border-bottom:1px solid rgba(0,0,0,.06)}
+.reg-feature:first-of-type{border-top:1px solid rgba(0,0,0,.06)}
+.reg-feature-body h4{font-size:.975rem;font-weight:700;color:var(--text-100);margin-bottom:5px;letter-spacing:-0.01em}
+.reg-feature-body p{font-size:.875rem;color:var(--text-300);line-height:1.62}
+.reg-right{display:flex;flex-direction:column;gap:16px;align-items:center}
+.reg-pill-wrap{display:flex;justify-content:center}
+.reg-form{
+  background:rgba(255,255,255,0.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-radius:22px;padding:40px;
+  width:100%;display:none;text-align:left;
+  border:1px solid rgba(255,255,255,.85);
+  box-shadow:0 4px 40px rgba(79,70,229,0.09),0 0 0 1px rgba(0,0,0,0.03);
+}
+.reg-form.visible{display:block}
+.reg-form h3{font-size:1.15rem;font-weight:700;margin-bottom:6px;color:var(--text-100);letter-spacing:-0.02em}
+.reg-form-note{font-size:.78rem;color:var(--text-300);margin-top:10px;text-align:center;display:flex;align-items:center;justify-content:center;gap:5px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-grid.full{grid-template-columns:1fr}
+.field label{display:block;font-size:.75rem;font-weight:600;color:var(--text-300);margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.field input,.field select,.field textarea{
+  width:100%;padding:11px 14px;border:1.5px solid #e5e7eb;border-radius:10px;
+  font-family:var(--font);font-size:.9rem;color:var(--text-100);
+  background:#fff;transition:border-color .2s,box-shadow .2s;outline:none;
+}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--indigo);box-shadow:0 0 0 3px rgba(79,70,229,0.1)}
+.field textarea{resize:vertical;min-height:90px}
+.form-ok{display:none;background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:10px;padding:14px 18px;color:#16a34a;font-size:.875rem;font-weight:600;margin-top:12px;text-align:center}
+.form-err{display:none;background:#fef2f2;border:1.5px solid #fecaca;border-radius:10px;padding:14px 18px;color:#dc2626;font-size:.875rem;margin-top:12px;text-align:center}
+.btn-submit{
+  width:100%;background:var(--indigo);color:#fff;border:none;cursor:pointer;
+  padding:14px;border-radius:11px;font-family:var(--font);font-size:.975rem;font-weight:700;
+  transition:background .2s,box-shadow .2s;margin-top:18px;letter-spacing:-0.01em;
+  box-shadow:0 4px 14px rgba(79,70,229,0.3);
+}
+.btn-submit:hover{background:var(--indigo-dark);box-shadow:0 6px 20px rgba(79,70,229,0.4)}
+.btn-submit:disabled{opacity:.6;cursor:not-allowed}
+
+/* ── CONTACT / CTA ────────────────────────────────────────── */
+.cta-section{
+  background:transparent;
+  padding:100px var(--px) 80px;
+  text-align:center;
+}
+.cta-inner{max-width:720px;margin:0 auto}
+.cta-h2{font-size:clamp(2rem,4.2vw,3.2rem);font-weight:900;letter-spacing:-0.04em;line-height:1.1;margin-bottom:16px;color:var(--text-100)}
+.cta-sub{font-size:1.05rem;color:var(--text-300);margin-bottom:44px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.72}
+.cta-btns{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;margin-bottom:64px}
+.contact-form-wrap{
+  background:rgba(255,255,255,0.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border:1px solid rgba(255,255,255,0.85);border-radius:22px;padding:40px;
+  text-align:left;
+  box-shadow:0 4px 40px rgba(79,70,229,0.09),0 0 0 1px rgba(0,0,0,0.03);
+  max-width:640px;margin:0 auto;
+}
+.contact-form-wrap h3{font-size:1.15rem;font-weight:700;margin-bottom:22px;color:var(--text-100);letter-spacing:-0.02em}
+
+/* ── FOOTER ───────────────────────────────────────────────── */
+footer{
+  background:#ffffff !important;
+  border-top:1px solid #e5e7eb;
+  padding:72px var(--px) 0;
+  position:relative;z-index:10;isolation:isolate;
+}
+.footer-inner{
+  max-width:var(--max-w);margin:0 auto;
+  display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;
+  gap:48px;padding-bottom:56px;
+}
+.footer-brand p{font-size:.9rem;color:#64748b;line-height:1.75;margin-top:16px;max-width:256px}
+.footer-col h4{font-size:.75rem;font-weight:700;color:#0f172a;text-transform:uppercase;letter-spacing:.07em;margin-bottom:16px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{font-size:.9rem;color:#64748b;text-decoration:none;transition:color .2s}
+.footer-col ul li a:hover{color:#0f172a}
+.footer-bottom{
+  border-top:1px solid #e5e7eb;padding:22px 0;
+  display:flex;align-items:center;justify-content:space-between;
+  max-width:var(--max-w);margin:0 auto;
+}
+.footer-bottom p{font-size:.82rem;color:#64748b}
+.footer-back-top{
+  background:var(--indigo);color:#fff;border:none;cursor:pointer;
+  width:36px;height:36px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;transition:background .2s,transform .2s;text-decoration:none;
+}
+.footer-back-top:hover{background:var(--indigo-dark);transform:translateY(-2px)}
+@media(max-width:760px){
+  .footer-inner{grid-template-columns:1fr 1fr;gap:36px}
+  .footer-brand{grid-column:1/-1}
+  .cta-btns{flex-direction:column;align-items:stretch}
+}
+
+/* ── MODALS ───────────────────────────────────────────────── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:2000;display:none;align-items:flex-start;justify-content:center;padding:60px 16px;overflow-y:auto;backdrop-filter:blur(4px)}
+.modal-overlay.open{display:flex}
+.modal-box{background:#fff;border-radius:22px;max-width:700px;width:100%;padding:44px;position:relative;max-height:80vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.2)}
+.modal-close{position:absolute;top:18px;right:18px;background:#f1f5f9;border:none;cursor:pointer;font-size:1.2rem;color:var(--text-300);width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:background .2s}
+.modal-close:hover{background:#e2e8f0}
+.modal-box h2{font-size:1.4rem;font-weight:800;margin-bottom:18px;letter-spacing:-0.03em}
+.modal-box h3{font-size:1rem;font-weight:700;margin:20px 0 8px;color:var(--text-100)}
+.modal-box p,.modal-box li{font-size:.9rem;color:var(--text-300);line-height:1.72;margin-bottom:8px}
+.modal-box ul{padding-left:18px}
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media(max-width:900px){
+  .nav-links{display:none}
+  .nav-mobile-btn{display:block}
+  .hc-kpis{grid-template-columns:repeat(2,1fr)}
+  .hc-sidebar{width:150px}
+  .feats{grid-template-columns:1fr}
+  .stats-inner{grid-template-columns:repeat(2,1fr)}
+  .form-grid{grid-template-columns:1fr}
+  .stat-item{border-right:none;border-bottom:1px solid rgba(79,70,229,0.08)}
+  .stat-item:last-child{border-bottom:none}
+  .stats-inner{grid-template-columns:1fr 1fr}
+  .section{padding:72px var(--px)}
+  .reg-section{padding:72px var(--px)}
+  .globe-section{padding:72px var(--px) 10px}
+  .cta-section{padding:72px var(--px) 60px}
+  .stats{padding:56px var(--px)}
+}
+@media(max-width:760px){
+  .footer-inner{grid-template-columns:1fr 1fr;gap:36px}
+  .footer-brand{grid-column:1/-1}
+  .cta-btns{flex-direction:column;align-items:stretch}
+}
+@media(max-width:600px){
+  #hero{padding-top:calc(var(--nav-h) + 56px)}
+  .hero-inner{margin-bottom:48px}
+  .hero-sub{font-size:1rem;max-width:100%;padding:0 4px}
+  .hero-btns{flex-direction:column;align-items:stretch;gap:10px}
+  .hc-inner{height:300px}
+  .hc-sidebar{display:none}
+  .hc-kpis{grid-template-columns:repeat(2,1fr)}
+  .scroll-card{max-width:100%}
+  .section{padding:56px var(--px)}
+  .reg-section{padding:56px var(--px)}
+  .globe-section{padding:56px var(--px) 0}
+  .cta-section{padding:56px var(--px) 48px}
+  .stats{padding:40px var(--px)}
+  .stat-item{padding:24px 16px}
+  .reg-two-col{gap:36px}
+  .reg-form{padding:28px 22px}
+  .reg-header{margin-bottom:36px}
+  .contact-form-wrap{padding:28px 22px}
+  .footer-inner{grid-template-columns:1fr;gap:28px}
+  .footer-brand{grid-column:auto}
+  footer{padding:48px var(--px) 0}
+  .modal-box{padding:28px 20px}
+  .cta-btns a,.cta-btns button{text-align:center}
+}
+
+/* ── FLIGHT PATH CANVAS ───────────────────────────────────── */
+#flightPathCanvas{
+  position:absolute;inset:0;width:100%;height:100%;
+  pointer-events:none;z-index:0;
+}
+#hero{position:relative}
+.hero-inner,.scroll-container{position:relative;z-index:1}
+
+/* ── FADE-IN ANIMATIONS ───────────────────────────────────── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{opacity:0;transform:translateY(28px)}
+.fade-up.visible{animation:fadeUp .7s cubic-bezier(.22,.68,0,1.1) forwards}
+.fade-up:nth-child(2){animation-delay:.1s}
+.fade-up:nth-child(3){animation-delay:.2s}
+</style>
+</head>
+<body>
+<div class="page-bg"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark">
+      <svg viewBox="0 0 24 24"><path d="M3 17l4-8 5 6 3-4 6 6H3z"/></svg>
+    </div>
+    <span class="nav-logo-text">ATM-R</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#what-we-do">What We Do</a></li>
+    <li><a href="#reach">Global Reach</a></li>
+    <li><a href="#register">Register</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#register" class="nav-cta">Get Started</a>
+  <button class="nav-mobile-btn" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex';document.querySelector('.nav-links').style.flexDirection='column';document.querySelector('.nav-links').style.position='absolute';document.querySelector('.nav-links').style.top='80px';document.querySelector('.nav-links').style.left='0';document.querySelector('.nav-links').style.right='0';document.querySelector('.nav-links').style.background='#fff';document.querySelector('.nav-links').style.padding='20px 24px';document.querySelector('.nav-links').style.borderRadius='0 0 16px 16px';document.querySelector('.nav-links').style.boxShadow='0 8px 24px rgba(0,0,0,.12)'">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <canvas id="flightPathCanvas"></canvas>
+  <div class="hero-inner">
+    <h1 class="hero-h1">Finding <span class="light-word">the</span> Right&nbsp;People<br><span class="light-word">for</span> <span class="accent">Aviation</span></h1>
+    <p class="hero-sub">ATM-R connects the organisations shaping the future of Air Traffic Management with experienced aviation professionals, from air traffic controllers and airspace designers to procedure specialists, systems experts and transformation leaders.</p>
+    <div class="hero-btns">
+      <a href="#register" class="btn-primary">Register Now</a>
+      <a href="#what-we-do" class="btn-ghost">Learn More</a>
+    </div>
+  </div>
+
+  <!-- ACETERNITY SCROLL CARD -->
+  <div class="scroll-container">
+    <div class="scroll-card" id="scrollCard">
+      <div class="scroll-card-inner">
+        <div class="hc-inner">
+          <!-- Sidebar -->
+          <div class="hc-sidebar">
+            <div class="hc-sidebar-logo"><span>✈</span> ATM-R</div>
+            <div class="sb-item active"><div class="sb-dot" style="background:#818cf8"></div>Dashboard</div>
+            <div class="sb-item"><div class="sb-dot" style="background:#34d399"></div>Candidates</div>
+            <div class="sb-item"><div class="sb-dot" style="background:#f59e0b"></div>Positions</div>
+            <div class="sb-item"><div class="sb-dot" style="background:#f87171"></div>Interviews</div>
+            <div class="sb-item"><div class="sb-dot" style="background:#a78bfa"></div>Analytics</div>
+            <div class="sb-item"><div class="sb-dot" style="background:#67e8f9"></div>Settings</div>
+          </div>
+          <!-- Main -->
+          <div class="hc-main">
+            <div class="hc-topbar">
+              <div class="hc-topbar-title">Recruitment Dashboard <span style="font-size:.6rem;color:#9ca3af;font-weight:400;margin-left:4px">EXAMPLE</span></div>
+              <div class="hc-badge">Live View</div>
+            </div>
+            <!-- KPIs -->
+            <div class="hc-kpis">
+              <div class="kpi"><div class="kpi-label">Active Roles</div><div class="kpi-val">24</div><div class="kpi-delta up">↑ 3 this week</div></div>
+              <div class="kpi"><div class="kpi-label">Candidates</div><div class="kpi-val">1,240</div><div class="kpi-delta up">↑ 87 new</div></div>
+              <div class="kpi"><div class="kpi-label">Placements</div><div class="kpi-val">38</div><div class="kpi-delta up">↑ 6 this month</div></div>
+              <div class="kpi"><div class="kpi-label">Countries</div><div class="kpi-val">35+</div><div class="kpi-delta up">↑ Global</div></div>
+            </div>
+            <!-- Charts -->
+            <div class="hc-charts">
+              <div class="hc-chart-box">
+                <div class="hc-chart-title">Placements Over Time</div>
+                <svg width="100%" height="120" viewBox="0 0 280 120" preserveAspectRatio="none">
+                  <defs><linearGradient id="lg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#4f46e5" stop-opacity=".18"/><stop offset="100%" stop-color="#4f46e5" stop-opacity="0"/></linearGradient></defs>
+                  <path d="M0,90 L35,75 L70,80 L105,60 L140,65 L175,40 L210,30 L245,20 L280,15" fill="none" stroke="#4f46e5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M0,90 L35,75 L70,80 L105,60 L140,65 L175,40 L210,30 L245,20 L280,15 L280,120 L0,120 Z" fill="url(#lg)"/>
+                </svg>
+              </div>
+              <div class="hc-chart-box">
+                <div class="hc-chart-title">Role Types</div>
+                <svg width="100%" height="110" viewBox="0 0 110 110">
+                  <circle cx="55" cy="55" r="40" fill="none" stroke="#e5e7eb" stroke-width="18"/>
+                  <circle cx="55" cy="55" r="40" fill="none" stroke="#4f46e5" stroke-width="18" stroke-dasharray="100 151" stroke-dashoffset="0" stroke-linecap="round"/>
+                  <circle cx="55" cy="55" r="40" fill="none" stroke="#34d399" stroke-width="18" stroke-dasharray="60 191" stroke-dashoffset="-100" stroke-linecap="round"/>
+                  <circle cx="55" cy="55" r="40" fill="none" stroke="#f59e0b" stroke-width="18" stroke-dasharray="40 211" stroke-dashoffset="-160" stroke-linecap="round"/>
+                  <text x="55" y="50" text-anchor="middle" font-size="11" font-weight="800" fill="#111827">38</text>
+                  <text x="55" y="63" text-anchor="middle" font-size="7.5" fill="#6b7280">placed</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- WHAT WE DO -->
+<section class="section" id="what-we-do">
+  <div class="section-inner">
+    <div class="feat-section-header">
+      
+      <h2 class="section-h2">Everything You Need for<br>Aviation Recruitment</h2>
+      <p class="section-sub">We work across the full ATM sector to find, assess and place the right people. No volume targets, no automated shortlisting.</p>
+    </div>
+    <div class="feats">
+
+      <!-- Card 1: Talent Sourcing -->
+      <div class="feat-card fade-up">
+        <div class="feat-card-img" style="background:linear-gradient(150deg,#dbeafe 0%,#eff6ff 100%);height:230px;padding:22px 22px 0;display:flex;align-items:flex-end">
+          <div class="feat-mock">
+            <div class="fm-label">Candidate Pool</div>
+            <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:9px">
+              <div class="fm-big">142</div>
+              <div style="font-size:11px;font-weight:700;color:#6366f1">↑ 23 new</div>
+            </div>
+            <div class="fm-row">
+              <div class="fm-dot" style="background:#4f46e5"></div>
+              <div class="fm-name" style="flex:1">Air Traffic Controller</div>
+              <div class="fm-badge" style="background:#ede9fe;color:#4f46e5">ATC</div>
+            </div>
+            <div class="fm-row">
+              <div class="fm-dot" style="background:#818cf8"></div>
+              <div class="fm-name" style="flex:1">ATM Engineer</div>
+              <div class="fm-badge" style="background:#ede9fe;color:#4f46e5">ENG</div>
+            </div>
+            <div class="fm-row" style="border-bottom:none">
+              <div class="fm-dot" style="background:#a5b4fc"></div>
+              <div class="fm-name" style="flex:1">Airspace Designer</div>
+              <div class="fm-badge" style="background:#ede9fe;color:#4f46e5">ASD</div>
+            </div>
+          </div>
+        </div>
+        <div class="feat-card-body">
+          <h3>Talent Sourcing</h3>
+          <p>We find aviation professionals who aren't on the job boards: ATM engineers, controllers, airspace designers and leadership roles worldwide.</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Candidate Matching -->
+      <div class="feat-card fade-up">
+        <div class="feat-card-img" style="background:linear-gradient(150deg,#dcfce7 0%,#f0fdf4 100%);height:230px;padding:22px 22px 0;display:flex;align-items:flex-end">
+          <div class="feat-mock">
+            <div class="fm-label">Profile Matching</div>
+            <div class="fm-match-row">
+              <div class="fm-avatar" style="background:linear-gradient(135deg,#34d399,#059669)">JT</div>
+              <div style="flex:1;min-width:0">
+                <div class="fm-name">James T.</div>
+                <div class="fm-meta">ATC · 12 yrs</div>
+              </div>
+              <div style="font-size:12px;font-weight:700;color:#059669">98%</div>
+            </div>
+            <div class="fm-match-row">
+              <div class="fm-avatar" style="background:linear-gradient(135deg,#6ee7b7,#10b981)">SA</div>
+              <div style="flex:1;min-width:0">
+                <div class="fm-name">Sarah A.</div>
+                <div class="fm-meta">ATM Eng · 8 yrs</div>
+              </div>
+              <div style="font-size:12px;font-weight:700;color:#059669">94%</div>
+            </div>
+            <div class="fm-match-row" style="border-bottom:none">
+              <div class="fm-avatar" style="background:linear-gradient(135deg,#a7f3d0,#34d399)">MK</div>
+              <div style="flex:1;min-width:0">
+                <div class="fm-name">Marcus K.</div>
+                <div class="fm-meta">Airspace · 6 yrs</div>
+              </div>
+              <div style="font-size:12px;font-weight:700;color:#059669">91%</div>
+            </div>
+          </div>
+        </div>
+        <div class="feat-card-body">
+          <h3>Candidate Matching</h3>
+          <p>We match registered candidates directly to employers hiring for their discipline. No endless applications, just the right introduction.</p>
+        </div>
+      </div>
+
+      <!-- Card 3: Screening -->
+      <div class="feat-card fade-up">
+        <div class="feat-card-img" style="background:linear-gradient(150deg,#ffedd5 0%,#fff7ed 100%);height:230px;padding:22px 22px 0;display:flex;align-items:flex-end">
+          <div class="feat-mock">
+            <div class="fm-label">Screening Report</div>
+            <div class="fm-check-row" style="margin-bottom:8px">
+              <div class="fm-check-icon" style="background:#dcfce7;color:#16a34a">✓</div>
+              <div style="font-size:12px;color:#374151;font-weight:500">Licence verification</div>
+            </div>
+            <div class="fm-check-row" style="margin-bottom:8px">
+              <div class="fm-check-icon" style="background:#dcfce7;color:#16a34a">✓</div>
+              <div style="font-size:12px;color:#374151;font-weight:500">Technical assessment</div>
+            </div>
+            <div class="fm-check-row" style="margin-bottom:8px">
+              <div class="fm-check-icon" style="background:#dcfce7;color:#16a34a">✓</div>
+              <div style="font-size:12px;color:#374151;font-weight:500">Psychometric profile</div>
+            </div>
+            <div class="fm-check-row" style="margin-bottom:12px">
+              <div class="fm-check-icon" style="background:#fef3c7;color:#d97706">◷</div>
+              <div style="font-size:12px;color:#374151;font-weight:500">Reference check</div>
+            </div>
+            <div style="background:#fff7ed;border:1px solid #fed7aa;border-radius:7px;padding:7px 11px;display:flex;justify-content:space-between;align-items:center">
+              <span style="font-size:11px;font-weight:600;color:#92400e">Score</span>
+              <span style="font-size:15px;font-weight:800;color:#ea580c">92/100</span>
+            </div>
+          </div>
+        </div>
+        <div class="feat-card-body">
+          <h3>Screening &amp; Assessment</h3>
+          <p>Every candidate is properly vetted before reaching a client: compliance checks, technical assessments and psychometric profiling.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- GLOBE SECTION -->
+<section class="globe-section" id="reach">
+  <div class="globe-inner">
+    <div class="globe-text">
+      
+      <h2 class="section-h2">Connecting Aviation<br>Talent Across the World</h2>
+      <p>Our network spans 35+ countries across six continents. From Sydney to Singapore, London to Los Angeles, we place the right person for the right role, wherever in the world that might be.</p>
+      <div class="globe-stat-row">
+        <div class="globe-stat">
+          <strong>35+</strong>
+          <span>Countries</span>
+        </div>
+        <div class="globe-stat">
+          <strong>6</strong>
+          <span>Continents</span>
+        </div>
+        <div class="globe-stat">
+          <strong>100+</strong>
+          <span>Airport hubs</span>
+        </div>
+      </div>
+    </div>
+    <canvas id="globeCanvas" width="800" height="800"></canvas>
+  </div>
+</section>
+
+<!-- REGISTER -->
+<section class="reg-section" id="register">
+  <div class="reg-inner">
+    <div class="reg-header">
+      
+      <h2 class="section-h2">Register with ATM-R</h2>
+      <p class="section-sub">Tell us who you are and we'll tailor the experience to you.</p>
+    </div>
+    <div class="reg-two-col">
+      <!-- LEFT: features -->
+      <div class="reg-left" id="reg-left-candidate">
+        <p style="font-size:1rem;color:var(--text-300);line-height:1.72;margin-bottom:36px;max-width:380px">Join aviation professionals already using ATM-R to find their next role. Register your profile and we will match you to opportunities that fit your discipline, experience and location.</p>
+        <div class="reg-feature">
+          
+          <div class="reg-feature-body">
+            
+            <h4>CV Assessment</h4>
+            <p>Our team reviews your CV against aviation-specific benchmarks and gives you honest feedback to improve your chances of placement.</p>
+          </div>
+        </div>
+        <div class="reg-feature">
+          
+          <div class="reg-feature-body">
+            
+            <h4>Candidate Profile Matching</h4>
+            <p>We put your profile in front of employers who are actively hiring for your ATM discipline. No endless applications required.</p>
+          </div>
+        </div>
+        <div class="reg-feature">
+          
+          <div class="reg-feature-body">
+            
+            <h4>Role Alerts</h4>
+            <p>Get notified when a role comes up that fits your profile. We only send alerts that are genuinely relevant to you.</p>
+          </div>
+        </div>
+      </div>
+      <div class="reg-left" id="reg-left-employer" style="display:none">
+        <p style="font-size:1rem;color:var(--text-300);line-height:1.72;margin-bottom:36px;max-width:380px">Access a curated network of vetted aviation professionals. Tell us what you need and we'll find the right people, fast.</p>
+        <div class="reg-feature">
+          
+          <div class="reg-feature-body">
+            
+            <h4>Talent Search</h4>
+            <p>We search our network and beyond to find candidates who match your exact requirements, not just those on the job boards.</p>
+          </div>
+        </div>
+        <div class="reg-feature">
+          
+          <div class="reg-feature-body">
+            
+            <h4>Pre-screened Candidates</h4>
+            <p>Every candidate we present has been vetted for licence validity, technical fit and cultural alignment before you see them.</p>
+          </div>
+        </div>
+        <div class="reg-feature">
+          
+          <div class="reg-feature-body">
+            
+            <h4>Dedicated Consultant</h4>
+            <p>A single point of contact who understands your operation and works with you until the right placement is made.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: pill + form -->
+      <div class="reg-right">
+        <div class="reg-pill-wrap">
+          <div class="reg-pill">
+            <button class="active" onclick="switchForm('candidate')">I'm a Candidate</button>
+            <button onclick="switchForm('employer')">I'm an Employer</button>
+          </div>
+        </div>
+        <!-- Candidate Form -->
+        <div class="reg-form visible" id="form-candidate">
+          <h3>Create Your Candidate Profile</h3>
+          <p style="font-size:.82rem;color:var(--text-300);margin-bottom:22px">Takes less than 2 minutes. No payment required.</p>
+          <form id="cform" onsubmit="return false">
+            <div class="form-grid">
+              <div class="field"><label>First Name</label><input type="text" name="fname" placeholder="Sarah" required></div>
+              <div class="field"><label>Last Name</label><input type="text" name="lname" placeholder="Mitchell" required></div>
+            </div>
+            <div class="form-grid full">
+              <div class="field"><label>Email Address</label><input type="email" name="email" placeholder="sarah@example.com" required></div>
+            </div>
+            <div class="form-grid full">
+              <div class="field"><label>Primary ATM Discipline</label>
+                <select name="role" required>
+                  <option value="">Select your discipline…</option>
+                  <option>Air Traffic Controller</option>
+                  <option>ATM Engineer</option>
+                  <option>Airspace Designer</option>
+                  <option>Procedure Designer</option>
+                  <option>Systems Specialist</option>
+                  <option>ATM Programme / Project Manager</option>
+                  <option>Safety Specialist</option>
+                  <option>Transformation Leader</option>
+                  <option>Other ATM Role</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-grid full">
+              <div class="field"><label>Years of Experience</label>
+                <select name="experience" required>
+                  <option value="">Select range…</option>
+                  <option>Less than 2 years</option>
+                  <option>2 – 5 years</option>
+                  <option>5 – 10 years</option>
+                  <option>10 – 20 years</option>
+                  <option>20+ years</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-grid full">
+              <div class="field"><label>Phone (optional)</label><input type="tel" name="phone" placeholder="+61 4xx xxx xxx"></div>
+            </div>
+            <div style="margin:14px 0 18px;display:flex;align-items:flex-start;gap:10px">
+              <input type="checkbox" id="c-consent" name="consent" required style="margin-top:3px;flex-shrink:0;accent-color:var(--indigo)">
+              <label for="c-consent" style="font-size:.8rem;color:var(--text-300);line-height:1.5;cursor:pointer">I consent to ATM-R collecting and storing my personal information to match me with relevant opportunities, in accordance with the <a href="#" onclick="openModal('privacy');return false" style="color:var(--indigo)">Privacy Policy</a>.</label>
+            </div>
+            <button type="submit" class="btn-submit" id="csubmit">Create My Profile →</button>
+            <div class="reg-form-note">No spam. No payment required.</div>
+            <div class="form-ok" id="cok">✓ Profile received! We'll be in touch within 2 business days.</div>
+            <div class="form-err" id="cerr">Something went wrong. Please try again or email us directly.</div>
+          </form>
+        </div>
+        <!-- Employer Form -->
+        <div class="reg-form" id="form-employer">
+          <h3>Register as an Employer</h3>
+          <p style="font-size:.82rem;color:var(--text-300);margin-bottom:22px">Tell us what you need and we'll find the right people.</p>
+          <form id="eform" onsubmit="return false">
+            <div class="form-grid">
+              <div class="field"><label>Company Name</label><input type="text" name="company" placeholder="Skyway Airlines" required></div>
+              <div class="field"><label>Contact Name</label><input type="text" name="contact" placeholder="John Brown" required></div>
+            </div>
+            <div class="form-grid">
+              <div class="field"><label>Email</label><input type="email" name="email" placeholder="john@skyway.com" required></div>
+              <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="+1 555 000 0000"></div>
+            </div>
+            <div class="form-grid">
+              <div class="field"><label>Country</label><input type="text" name="country" placeholder="Australia"></div>
+              <div class="field"><label>Operation Type</label>
+                <select name="optype">
+                  <option value="">Select…</option>
+                  <option>ANSP / Air Navigation Service Provider</option>
+                  <option>Airport / Aerodrome Operator</option>
+                  <option>Civil Aviation Authority / Regulator</option>
+                  <option>Commercial Airline</option>
+                  <option>Defence / Government</option>
+                  <option>ATM Systems / Technology</option>
+                  <option>Consulting / Advisory</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-grid full">
+              <div class="field"><label>Roles Required</label><textarea name="roles" placeholder="Describe the positions you need to fill…"></textarea></div>
+            </div>
+            <div style="margin:14px 0 18px;display:flex;align-items:flex-start;gap:10px">
+              <input type="checkbox" id="e-consent" name="consent" required style="margin-top:3px;flex-shrink:0;accent-color:var(--indigo)">
+              <label for="e-consent" style="font-size:.8rem;color:var(--text-300);line-height:1.5;cursor:pointer">I consent to ATM-R collecting and using the information provided to respond to this enquiry, in accordance with the <a href="#" onclick="openModal('privacy');return false" style="color:var(--indigo)">Privacy Policy</a>.</label>
+            </div>
+            <button type="submit" class="btn-submit" id="esubmit">Submit Enquiry →</button>
+            <div class="reg-form-note">Your information is handled in accordance with our Privacy Policy.</div>
+            <div class="form-ok" id="eok">✓ Enquiry received! Our team will contact you within 1 business day.</div>
+            <div class="form-err" id="eerr">Something went wrong. Please try again or email us directly.</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA + CONTACT -->
+<section class="cta-section" id="contact">
+  <div class="cta-inner">
+    
+    <h2 class="cta-h2">Have a Question?<br>We'd Love to Hear From You.</h2>
+    <p class="cta-sub">Whether you're an employer looking for talent or a professional seeking your next role, get in touch and we'll respond within one business day.</p>
+    <div class="cta-btns">
+      <a href="#register" class="btn-primary">Register Now</a>
+      <a href="mailto:support@atm-r.com" class="btn-ghost">Email Us Directly</a>
+    </div>
+    <div class="contact-form-wrap">
+      <h3>Send us a Message</h3>
+      <form id="contactform" onsubmit="return false">
+        <div class="form-grid">
+          <div class="field"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
+        </div>
+        <div class="form-grid full" style="margin-top:0">
+          <div class="field"><label>Message</label><textarea name="message" placeholder="How can we help?" rows="4" required></textarea></div>
+        </div>
+        <button type="submit" class="btn-submit" id="ctsubmit">Send Message</button>
+        <div class="form-ok" id="ctok">✓ Message sent! We'll get back to you shortly.</div>
+        <div class="form-err" id="cterr">Something went wrong. Please try again.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" style="display:inline-flex;text-decoration:none;color:#0f172a">
+        <div class="nav-logo-mark">
+          <svg viewBox="0 0 24 24"><path d="M3 17l4-8 5 6 3-4 6 6H3z"/></svg>
+        </div>
+        <span class="nav-logo-text">ATM-R</span>
+      </a>
+      <p>A specialist recruitment agency connecting ANSPs, airports, regulators and aviation organisations with experienced Air Traffic Management professionals worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#what-we-do">What We Do</a></li>
+        <li><a href="#reach">Global Reach</a></li>
+        <li><a href="#register">Register</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#" onclick="openModal('privacy');return false">Privacy Policy</a></li>
+        <li><a href="#" onclick="openModal('terms');return false">Terms of Use</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:support@atm-r.com">support@atm-r.com</a></li>
+        <li><a href="#contact">Send a Message</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 ATM-R Pty Ltd &nbsp;&middot;&nbsp; ABN 47 696 687 144</p>
+    <a href="#" class="footer-back-top" title="Back to top">&#8593;</a>
+  </div>
+</footer>
+
+<!-- PRIVACY MODAL -->
+<div class="modal-overlay" id="modal-privacy" onclick="if(event.target===this)closeModal('privacy')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('privacy')">&times;</button>
+    <h2>Privacy Policy</h2>
+    <p><strong>Effective date:</strong> 30 March 2026</p>
+    <p>ATM-R Pty Ltd (ABN 47 696 687 144) ("<strong>ATM-R</strong>", "we", "us") is committed to protecting your personal information in accordance with the <em>Privacy Act 1988</em> (Cth) and the Australian Privacy Principles.</p>
+    <h3>Information We Collect</h3>
+    <p>We collect personal information you provide when registering as a candidate or employer, including name, contact details, employment history, licences and qualifications.</p>
+    <h3>How We Use Your Information</h3>
+    <ul>
+      <li>To match candidates with suitable aviation roles</li>
+      <li>To communicate with employers about talent requirements</li>
+      <li>To comply with regulatory obligations (EASA, CASA, FAA)</li>
+    </ul>
+    <h3>Disclosure</h3>
+    <p>We do not sell your personal information. We may share it with prospective employers or clients as part of our recruitment services, or with regulators as required by law.</p>
+    <h3>Contact</h3>
+    <p>Privacy enquiries: <a href="mailto:support@atm-r.com">support@atm-r.com</a></p>
+  </div>
+</div>
+
+<!-- TERMS MODAL -->
+<div class="modal-overlay" id="modal-terms" onclick="if(event.target===this)closeModal('terms')">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('terms')">&times;</button>
+    <h2>Terms of Use</h2>
+    <p><strong>Last updated:</strong> 18 September 2026</p>
+    <p>These Terms of Use apply to your use of the ATM-R website and any information, material or content made available through it.</p>
+    <p>The website is operated by ATMR Pty Ltd (ABN 47 696 687 144), trading as ATM-R.</p>
+    <p>By accessing or using this website, you agree to these Terms of Use.</p>
+    <h3>1. About this website</h3>
+    <p>ATM-R provides professional services to the aviation and air traffic management sectors.</p>
+    <p>This website provides general information about ATM-R, our capabilities, services, experience and areas of expertise. It may also contain articles, insights, project information, technical material, diagrams, graphics or other aviation-related content.</p>
+    <p>The information provided on this website is general in nature and should be considered in that context.</p>
+    <h3>2. Aviation and technical information</h3>
+    <p>Information published on this website is provided for general information purposes only.</p>
+    <p>Unless expressly stated otherwise, information available through this website does not constitute:</p>
+    <ul>
+      <li>operational aviation information;</li>
+      <li>aeronautical information or aeronautical data;</li>
+      <li>air traffic control instructions or advice;</li>
+      <li>flight planning information;</li>
+      <li>instrument flight procedure or airspace design data;</li>
+      <li>regulatory or safety advice;</li>
+      <li>engineering or technical certification;</li>
+      <li>professional advice for a particular project or circumstance; or</li>
+      <li>an approval, endorsement or determination by an aviation authority, regulator, airport operator or air navigation service provider.</li>
+    </ul>
+    <p>Aviation information is subject to change and may be affected by regulatory, operational, technical, environmental and other considerations.</p>
+    <p>Information obtained from this website must not be relied upon for the operation, navigation or control of an aircraft or for any safety-critical or operational aviation decision.</p>
+    <p>Users requiring current operational or aeronautical information should refer to the relevant official and authoritative sources.</p>
+    <h3>3. Professional services</h3>
+    <p>Information provided on this website does not create a consultant-client, adviser-client or other professional relationship between ATM-R and a website user.</p>
+    <p>Professional advice provided by ATM-R is subject to the scope, assumptions, limitations and terms of the relevant engagement.</p>
+    <p>Where there is any inconsistency between information published on this website and advice or deliverables formally provided by ATM-R under a professional engagement, the terms and information applicable to that engagement will prevail.</p>
+    <h3>4. Accuracy and currency of information</h3>
+    <p>ATM-R takes reasonable care in preparing information published on this website.</p>
+    <p>However, we do not represent or warrant that all information on the website is complete, accurate, current or suitable for a particular purpose.</p>
+    <p>Information may be changed, updated or removed without notice.</p>
+    <p>Where website content refers to legislation, regulations, standards, aviation procedures, operational arrangements or other third-party requirements, users should verify the current requirements with the relevant authoritative source before relying on that information.</p>
+    <h3>5. Intellectual property</h3>
+    <p>Unless otherwise indicated, the content of this website is owned by or licensed to ATMR Pty Ltd and is protected by applicable intellectual property laws.</p>
+    <p>This includes, where applicable:</p>
+    <ul>
+      <li>text and written material;</li>
+      <li>graphics and diagrams;</li>
+      <li>photographs and imagery;</li>
+      <li>technical illustrations;</li>
+      <li>reports and publications;</li>
+      <li>website design and layout;</li>
+      <li>logos, branding and trade marks; and</li>
+      <li>other original material published by ATM-R.</li>
+    </ul>
+    <p>You may view and use website content for your own legitimate personal or business information purposes.</p>
+    <p>You must not reproduce, publish, distribute, modify, commercially exploit or otherwise use ATM-R content without prior written permission, except where permitted by law.</p>
+    <h3>6. Third-party material</h3>
+    <p>The website may contain information, images, data, references or other material owned or produced by third parties.</p>
+    <p>All rights in third-party material remain with the relevant owner.</p>
+    <h3>Contact</h3>
+    <p>Legal enquiries: <a href="mailto:support@atm-r.com">support@atm-r.com</a></p>
+  </div>
+</div>
+
+<script>
+/* ── TELEGRAM ─────────────────────────────────────────────── */
+async function sendTelegram(text, btnEl, okEl, errEl) {
+  btnEl.disabled = true;
+  btnEl.textContent = 'Sending…';
+  try {
+    const r = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text: text })
+    });
+    const d = await r.json();
+    if (r.ok && d.ok) {
+      btnEl.closest('form').reset();
+      okEl.style.display = 'block';
+      btnEl.style.display = 'none';
+    } else {
+      throw new Error(d.error || 'Submission error');
+    }
+  } catch(e) {
+    console.error(e);
+    if (errEl) errEl.style.display = 'block';
+    btnEl.disabled = false;
+    btnEl.textContent = btnEl.dataset.label;
+  }
+}
+
+/* ── FORMS ────────────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', function() {
+
+  var cform = document.getElementById('cform');
+  if (cform) {
+    cform.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var d = new FormData(cform);
+      var text = '✈ CANDIDATE REGISTRATION\n'
+        + 'Name: ' + (d.get('fname')||'') + ' ' + (d.get('lname')||'') + '\n'
+        + 'Email: ' + (d.get('email')||'') + '\n'
+        + 'Phone: ' + (d.get('phone')||'N/A') + '\n'
+        + 'Discipline: ' + (d.get('role')||'N/A') + '\n'
+        + 'Experience: ' + (d.get('experience')||'N/A') + '\n'
+        + 'Consent: Yes';
+      var btn = document.getElementById('csubmit');
+      btn.dataset.label = btn.textContent;
+      sendTelegram(text, btn, document.getElementById('cok'), document.getElementById('cerr'));
+    });
+  }
+
+  var eform = document.getElementById('eform');
+  if (eform) {
+    eform.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var d = new FormData(eform);
+      var text = '🏢 EMPLOYER REGISTRATION\n'
+        + 'Company: ' + (d.get('company')||'') + '\n'
+        + 'Contact: ' + (d.get('contact')||'') + '\n'
+        + 'Email: ' + (d.get('email')||'') + '\n'
+        + 'Phone: ' + (d.get('phone')||'N/A') + '\n'
+        + 'Country: ' + (d.get('country')||'N/A') + '\n'
+        + 'Operation: ' + (d.get('optype')||'N/A') + '\n'
+        + 'Roles: ' + (d.get('roles')||'N/A');
+      var btn = document.getElementById('esubmit');
+      btn.dataset.label = btn.textContent;
+      sendTelegram(text, btn, document.getElementById('eok'), document.getElementById('eerr'));
+    });
+  }
+
+  var contactform = document.getElementById('contactform');
+  if (contactform) {
+    contactform.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var d = new FormData(contactform);
+      var text = '📬 CONTACT ENQUIRY\n'
+        + 'Name: ' + (d.get('name')||'') + '\n'
+        + 'Email: ' + (d.get('email')||'') + '\n'
+        + 'Message: ' + (d.get('message')||'');
+      var btn = document.getElementById('ctsubmit');
+      btn.dataset.label = btn.textContent;
+      sendTelegram(text, btn, document.getElementById('ctok'), document.getElementById('cterr'));
+    });
+  }
+
+  /* ── INTERSECTION OBSERVER (fade-up) ─────────────────────── */
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.12});
+  document.querySelectorAll('.fade-up').forEach(function(el) { observer.observe(el); });
+});
+
+/* ── SWITCH FORM ──────────────────────────────────────────── */
+function switchForm(type) {
+  document.getElementById('form-candidate').classList.toggle('visible', type==='candidate');
+  document.getElementById('form-employer').classList.toggle('visible', type==='employer');
+  document.getElementById('reg-left-candidate').style.display = type==='candidate' ? '' : 'none';
+  document.getElementById('reg-left-employer').style.display = type==='employer' ? '' : 'none';
+  document.querySelectorAll('.reg-pill button').forEach(function(b,i){
+    b.classList.toggle('active', (i===0 && type==='candidate') || (i===1 && type==='employer'));
+  });
+}
+
+/* ── MODALS ───────────────────────────────────────────────── */
+function openModal(id) { document.getElementById('modal-'+id).classList.add('open'); document.body.style.overflow='hidden'; }
+function closeModal(id) { document.getElementById('modal-'+id).classList.remove('open'); document.body.style.overflow=''; }
+document.addEventListener('keydown', function(e){ if(e.key==='Escape'){ closeModal('privacy'); closeModal('terms'); } });
+
+/* ── ACETERNITY SCROLL TILT ───────────────────────────────── */
+(function() {
+  var card = document.getElementById('scrollCard');
+  var hero = document.getElementById('hero');
+  if (!card || !hero) return;
+  function updateTilt() {
+    var heroH = hero.offsetHeight;
+    var scrolled = Math.min(window.scrollY, heroH);
+    var progress = scrolled / heroH;
+    var rotateX = 18 * (1 - progress);
+    var scale = 1.04 - (0.04 * progress);
+    card.style.transform = 'rotateX(' + rotateX + 'deg) scale(' + scale + ')';
+  }
+  window.addEventListener('scroll', updateTilt, {passive: true});
+  updateTilt();
+})();
+
+/* ── FLIGHT PATHS ─────────────────────────────────────────── */
+(function() {
+  var canvas = document.getElementById('flightPathCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+
+  var hero = document.getElementById('hero');
+
+  function resize() {
+    canvas.width = hero.offsetWidth;
+    canvas.height = hero.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', function() { resize(); initPlanes(); });
+
+  // ── Plane silhouette (same as before)
+  function drawPlane(x, y, angle, sc, alpha) {
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(angle);
+    ctx.scale(sc, sc);
+    ctx.globalAlpha = alpha;
+    ctx.fillStyle = 'rgba(79,70,229,1)';
+    // Fuselage
+    ctx.beginPath();
+    ctx.moveTo(14,0); ctx.bezierCurveTo(10,-1.2,-6,-1.8,-12,-1.2);
+    ctx.lineTo(-14,0); ctx.bezierCurveTo(-12,1.2,-6,1.8,10,1.2); ctx.closePath(); ctx.fill();
+    // Left wing
+    ctx.beginPath();
+    ctx.moveTo(4,0); ctx.lineTo(2,-1); ctx.lineTo(-4,-13); ctx.lineTo(-7,-13.5);
+    ctx.lineTo(-5,-12); ctx.lineTo(-2,-1.2); ctx.lineTo(-4,0); ctx.closePath(); ctx.fill();
+    // Right wing
+    ctx.beginPath();
+    ctx.moveTo(4,0); ctx.lineTo(2,1); ctx.lineTo(-4,13); ctx.lineTo(-7,13.5);
+    ctx.lineTo(-5,12); ctx.lineTo(-2,1.2); ctx.lineTo(-4,0); ctx.closePath(); ctx.fill();
+    // Tail fin
+    ctx.beginPath();
+    ctx.moveTo(-8,0); ctx.lineTo(-14,0); ctx.lineTo(-12,-5.5); ctx.lineTo(-8,-3); ctx.closePath(); ctx.fill();
+    // H-stabs
+    ctx.beginPath();
+    ctx.moveTo(-9,-0.5); ctx.lineTo(-13,-5.5); ctx.lineTo(-14.5,-5.8); ctx.lineTo(-13.5,-4.5); ctx.lineTo(-9,-1.5); ctx.closePath(); ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(-9,0.5); ctx.lineTo(-13,5.5); ctx.lineTo(-14.5,5.8); ctx.lineTo(-13.5,4.5); ctx.lineTo(-9,1.5); ctx.closePath(); ctx.fill();
+    ctx.globalAlpha = 1;
+    ctx.restore();
+  }
+
+  // Bezier helpers
+  function bez(p0,p1,p2,p3,t){ var m=1-t; return m*m*m*p0+3*m*m*t*p1+3*m*t*t*p2+t*t*t*p3; }
+
+  var planes = [];
+  var PLANE_COUNT = 10;
+
+  function randomEdge() {
+    var W = canvas.width, H = canvas.height;
+    var edge = Math.floor(Math.random() * 4);
+    var margin = 50 + Math.random() * 50;
+    if (edge === 0) return { x: W * Math.random(), y: -margin };
+    if (edge === 1) return { x: W + margin,        y: H * Math.random() };
+    if (edge === 2) return { x: W * Math.random(), y: H + margin };
+                   return { x: -margin,             y: H * Math.random() };
+  }
+
+  function makePlane() {
+    var W = canvas.width, H = canvas.height;
+    var sp = randomEdge();
+    var ep = randomEdge();
+    // Ensure start and end are on different edges — retry once if same quadrant
+    if (Math.abs(sp.x - ep.x) < W * 0.3 && Math.abs(sp.y - ep.y) < H * 0.3) ep = randomEdge();
+
+    // Two control points — pull path through a random interior region so it curves naturally
+    var cx1 = W * (0.15 + Math.random() * 0.7) + (Math.random()-0.5) * W * 0.3;
+    var cy1 = H * (0.1  + Math.random() * 0.8) + (Math.random()-0.5) * H * 0.25;
+    var cx2 = W * (0.15 + Math.random() * 0.7) + (Math.random()-0.5) * W * 0.3;
+    var cy2 = H * (0.1  + Math.random() * 0.8) + (Math.random()-0.5) * H * 0.25;
+
+    return {
+      sx: sp.x, sy: sp.y,
+      cx1: cx1, cy1: cy1,
+      cx2: cx2, cy2: cy2,
+      ex: ep.x, ey: ep.y,
+      t: Math.random(), // stagger starts
+      speed: 0.00022 + Math.random() * 0.00018,
+      opacity: 0.28 + Math.random() * 0.38,
+      scale: 0.6 + Math.random() * 0.5,
+    };
+  }
+
+  function initPlanes() {
+    planes = [];
+    for (var i = 0; i < PLANE_COUNT; i++) planes.push(makePlane());
+  }
+
+  if (document.readyState === 'complete') {
+    setTimeout(initPlanes, 120);
+  } else {
+    window.addEventListener('load', function(){ setTimeout(initPlanes, 120); });
+  }
+
+  function drawTrail(p, t) {
+    // Fading contrail — covers last ~40% of journey, fades from nothing at tail to solid at plane
+    var TRAIL_LEN = 0.38;
+    var t0 = Math.max(0, t - TRAIL_LEN);
+    var STEPS = 32;
+    ctx.save();
+    for (var i = 0; i < STEPS; i++) {
+      var ta = t0 + (t - t0) * (i / STEPS);
+      var tb = t0 + (t - t0) * ((i + 1) / STEPS);
+      var frac = (i + 1) / STEPS; // 0→1 tail to nose
+      var alpha = p.opacity * frac * frac * 0.55;
+      var x1 = bez(p.sx,p.cx1,p.cx2,p.ex,ta), y1 = bez(p.sy,p.cy1,p.cy2,p.ey,ta);
+      var x2 = bez(p.sx,p.cx1,p.cx2,p.ex,tb), y2 = bez(p.sy,p.cy1,p.cy2,p.ey,tb);
+      ctx.beginPath(); ctx.moveTo(x1,y1); ctx.lineTo(x2,y2);
+      ctx.strokeStyle = 'rgba(99,102,241,' + alpha + ')';
+      ctx.lineWidth = 0.5 + frac * 1.0;
+      ctx.stroke();
+    }
+    ctx.restore();
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    planes.forEach(function(p) {
+      p.t += p.speed;
+      if (p.t > 1.08) {
+        // Recycle with a fresh path
+        var np = makePlane();
+        np.t = -0.05; // start just off-screen
+        Object.assign(p, np);
+      }
+
+      var t = Math.max(0.001, Math.min(0.999, p.t));
+      var px  = bez(p.sx,p.cx1,p.cx2,p.ex, t);
+      var py  = bez(p.sy,p.cy1,p.cy2,p.ey, t);
+      var t2  = Math.min(0.999, t + 0.006);
+      var px2 = bez(p.sx,p.cx1,p.cx2,p.ex, t2);
+      var py2 = bez(p.sy,p.cy1,p.cy2,p.ey, t2);
+      var heading = Math.atan2(py2 - py, px2 - px);
+
+      // Fade in/out at edges
+      var edgeFade = Math.min(1, Math.min(p.t, 1 - p.t) * 14);
+      var opa = p.opacity * edgeFade;
+
+      if (p.t >= 0 && p.t <= 1) {
+        drawTrail(p, t);
+        drawPlane(px, py, heading, p.scale, opa);
+      }
+    });
+
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+
+/* ── GLOBE ────────────────────────────────────────────────── */
+(function() {
+  var canvas = document.getElementById('globeCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W = canvas.width, H = canvas.height;
+  var cx = W/2, cy = H/2, R = W*0.44;
+  var rot = 0.3;
+  var INDIGO = '#4f46e5';
+
+  var continents = [
+    [[-170,72],[-130,72],[-60,83],[-10,83],[-60,83],[-55,50],[-52,47],[-66,44],[-75,45],[-79,43],[-82,42],[-90,48],[-95,49],[-105,49],[-120,49],[-125,48],[-130,54],[-140,59],[-145,60],[-160,60],[-170,63],[-170,72]],
+    [[-82,10],[-70,12],[-60,15],[-55,5],[-50,-5],[-35,-8],[-35,-20],[-40,-22],[-43,-22],[-45,-23],[-48,-26],[-51,-30],[-55,-35],[-62,-38],[-65,-41],[-67,-45],[-66,-55],[-70,-52],[-75,-50],[-78,-45],[-80,-40],[-80,-30],[-78,-10],[-80,0],[-82,10]],
+    [[-10,71],[30,71],[40,67],[35,55],[23,55],[18,54],[12,55],[8,55],[4,51],[0,51],[-4,48],[-10,44],[-8,38],[-5,36],[5,36],[15,37],[20,38],[28,41],[30,42],[36,42],[28,46],[22,50],[15,54],[10,55],[8,58],[5,62],[10,63],[15,69],[30,71]],
+    [[-17,14],[-17,21],[0,22],[10,22],[15,23],[25,22],[37,22],[42,12],[44,0],[42,-10],[36,-18],[35,-24],[32,-30],[28,-34],[18,-35],[16,-30],[14,-22],[12,-5],[2,4],[-5,4],[-15,10],[-17,14]],
+    [[26,42],[36,42],[40,38],[42,38],[55,22],[65,22],[70,18],[80,10],[80,28],[90,22],[100,10],[105,10],[110,1],[110,22],[120,22],[125,30],[130,35],[135,35],[140,40],[140,51],[150,60],[150,70],[130,72],[100,72],[80,73],[60,72],[40,68],[30,60],[26,55],[26,42]],
+    [[114,-22],[121,-34],[127,-35],[130,-31],[132,-30],[137,-36],[138,-37],[140,-36],[144,-38],[147,-39],[150,-37],[152,-34],[153,-28],[152,-25],[153,-27],[154,-28],[150,-22],[142,-11],[136,-12],[130,-14],[124,-17],[118,-20],[114,-22]],
+    [[172,-34],[178,-38],[176,-40],[172,-43],[168,-46],[172,-46],[175,-41],[175,-37],[172,-34]],
+  ];
+
+  var airports = [
+    ['SYD',151.18,-33.94],['MEL',144.84,-37.67],['BNE',153.12,-27.38],['PER',115.97,-31.94],
+    ['ADL',138.53,-34.96],['DRW',130.88,-12.41],['CNS',145.75,-16.88],['OOL',153.50,-28.17],
+    ['AKL',174.79,-36.99],['CHC',172.54,-43.49],
+    ['SIN',103.99,1.36],['KUL',101.70,2.74],['BKK',100.75,13.69],['CGK',-106.65,-6.12],
+    ['MNL',121.02,14.51],['HKG',113.92,22.31],['TPE',121.23,25.08],['PVG',121.80,31.15],
+    ['PEK',116.59,40.08],['ICN',126.45,37.46],['NRT',140.39,35.77],['KIX',135.24,34.43],
+    ['HAN',105.81,21.22],['SGN',106.65,10.82],
+    ['DXB',55.36,25.25],['AUH',54.65,24.44],['DOH',51.61,25.27],['KWI',47.98,29.23],
+    ['RUH',46.70,24.96],['MCT',58.28,23.59],['BOM',72.87,19.09],['DEL',77.10,28.56],
+    ['BLR',77.71,13.20],['MAA',80.18,12.99],['HYD',78.43,17.24],['CCU',88.45,22.65],
+    ['CMB',79.89,7.18],['MLE',73.53,4.19],['KHI',67.17,24.91],['LHE',74.40,31.52],
+    ['DAC',90.40,23.84],['RGN',96.13,16.91],
+    ['LHR',-0.46,51.48],['CDG',2.55,49.01],['AMS',4.76,52.31],['FRA',8.57,50.04],
+    ['MAD',-3.57,40.49],['BCN',2.07,41.30],['FCO',12.24,41.80],['MXP',8.72,45.63],
+    ['MUC',11.79,48.35],['VIE',16.57,48.11],['ZRH',8.55,47.46],['BRU',4.48,50.90],
+    ['LIS',-9.13,38.77],['OSL',10.62,60.20],['ARN',17.92,59.65],['HEL',24.96,60.32],
+    ['CPH',12.65,55.63],['DUB',-6.27,53.43],['MAN',-2.27,53.35],['EDI',-3.37,55.95],
+    ['IST',29.00,41.00],['ATH',23.94,37.94],['WAW',14.11,52.17],['PRG',14.27,50.10],
+    ['BUD',19.26,47.44],['OTP',26.10,44.57],['SOF',23.41,42.70],
+    ['SVO',37.41,55.97],['LED',30.26,59.80],['KZN',49.28,55.61],
+    ['CAI',31.41,30.13],['ADD',38.80,9.03],['NBO',36.93,-1.32],['JNB',28.24,-26.14],
+    ['CPT',18.60,-33.96],['LOS',3.32,6.58],['ABJ',-3.93,5.36],['ACC',-0.17,5.60],
+    ['DKR',-17.49,14.74],['TUN',10.23,36.85],['CMN',-7.59,33.37],['ALG',3.22,36.69],
+    ['DAR',39.20,-6.88],['EBB',32.44,0.04],['LUN',28.45,-15.33],
+    ['JFK',-73.78,40.64],['LAX',-118.41,33.94],['ORD',-87.91,41.98],['ATL',-84.43,33.64],
+    ['DFW',-97.04,32.90],['MIA',-80.29,25.80],['SFO',-122.37,37.62],['SEA',-122.31,47.45],
+    ['YYZ',-79.63,43.68],['YVR',-123.18,49.19],['MEX',-99.07,19.44],['GRU',-46.47,-23.43],
+    ['GIG',-43.24,-22.81],['SCL',-70.79,-33.39],['EZE',-58.54,-34.82],['BOG',-74.14,4.70],
+    ['LIM',-77.11,-12.02],['PTY',-79.38,9.07],['CUN',-86.88,21.04],
+  ];
+
+  var routes = [
+    ['SYD','SIN'],['SYD','DXB'],['SYD','LHR'],['SYD','LAX'],['SYD','HKG'],['SYD','NRT'],
+    ['MEL','SIN'],['MEL','DXB'],['MEL','LHR'],['MEL','LAX'],['BNE','SIN'],['PER','DXB'],
+    ['SIN','LHR'],['SIN','JFK'],['SIN','DXB'],['SIN','HKG'],['SIN','ICN'],['SIN','NRT'],
+    ['HKG','LHR'],['HKG','JFK'],['HKG','DXB'],['HKG','ICN'],['HKG','NRT'],['HKG','PVG'],
+    ['DXB','LHR'],['DXB','JFK'],['DXB','LAX'],['DXB','BOM'],['DXB','DEL'],['DXB','ICN'],
+    ['LHR','JFK'],['LHR','LAX'],['LHR','CDG'],['LHR','FRA'],['LHR','AMS'],
+    ['CDG','JFK'],['CDG','SIN'],['FRA','JFK'],['FRA','LAX'],['FRA','SIN'],
+    ['JFK','LAX'],['JFK','MIA'],['JFK','ORD'],['JFK','ATL'],['JFK','GRU'],
+    ['LAX','SFO'],['LAX','SEA'],['LAX','YVR'],['LAX','MEX'],
+    ['GRU','EZE'],['GRU','BOG'],['GRU','SCL'],['LIM','BOG'],
+    ['NBO','JNB'],['NBO','ADD'],['JNB','LHR'],['JNB','DXB'],['CAI','LHR'],['CAI','DXB'],
+    ['ICN','JFK'],['ICN','SFO'],['NRT','JFK'],['NRT','LAX'],['NRT','SFO'],
+    ['PEK','LHR'],['PEK','LAX'],['PEK','SIN'],['PVG','LHR'],['PVG','JFK'],
+    ['BOM','LHR'],['BOM','DXB'],['DEL','LHR'],['DEL','DXB'],
+    ['AKL','SYD'],['AKL','LAX'],['AKL','SIN'],
+    ['DFW','LAX'],['DFW','MEX'],['ATL','LHR'],['ORD','LHR'],
+  ];
+
+  var byCode = {};
+  airports.forEach(function(a){ byCode[a[0]] = a; });
+
+  var dots = [];
+  for (var i = 0; i < 55; i++) {
+    var rt = routes[i % routes.length];
+    var a = byCode[rt[0]], b = byCode[rt[1]];
+    if (!a || !b) continue;
+    dots.push({
+      from: [a[1]*Math.PI/180, a[2]*Math.PI/180],
+      to:   [b[1]*Math.PI/180, b[2]*Math.PI/180],
+      t: Math.random(),
+      speed: 0.0008 + Math.random()*0.0006,
+      trail: []
+    });
+  }
+
+  function project(lon, lat) {
+    var cosLat = Math.cos(lat);
+    var x = R * cosLat * Math.sin(lon - rot);
+    var y = -R * Math.sin(lat);
+    var z = R * cosLat * Math.cos(lon - rot);
+    return {x: cx + x, y: cy + y, z: z, visible: z > 0};
+  }
+
+  function slerp(a, b, t) {
+    var lon1 = a[0], lat1 = a[1], lon2 = b[0], lat2 = b[1];
+    var x1 = Math.cos(lat1)*Math.cos(lon1), y1 = Math.cos(lat1)*Math.sin(lon1), z1 = Math.sin(lat1);
+    var x2 = Math.cos(lat2)*Math.cos(lon2), y2 = Math.cos(lat2)*Math.sin(lon2), z2 = Math.sin(lat2);
+    var dot = x1*x2 + y1*y2 + z1*z2;
+    dot = Math.max(-1, Math.min(1, dot));
+    var omega = Math.acos(dot);
+    if (Math.abs(omega) < 0.001) return a;
+    var s = Math.sin(omega);
+    var f0 = Math.sin((1-t)*omega)/s;
+    var f1 = Math.sin(t*omega)/s;
+    var xr = f0*x1 + f1*x2, yr = f0*y1 + f1*y2, zr = f0*z1 + f1*z2;
+    return [Math.atan2(yr, xr), Math.asin(zr)];
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    var grad = ctx.createRadialGradient(cx-R*0.3, cy-R*0.3, R*0.1, cx, cy, R);
+    grad.addColorStop(0, '#e8f0fe');
+    grad.addColorStop(1, '#c7d7f5');
+    ctx.beginPath();
+    ctx.arc(cx, cy, R, 0, Math.PI*2);
+    ctx.fillStyle = grad;
+    ctx.fill();
+
+    ctx.strokeStyle = 'rgba(79,70,229,0.08)';
+    ctx.lineWidth = 0.5;
+    for (var la = -80; la <= 80; la += 20) {
+      var laR = la*Math.PI/180;
+      ctx.beginPath();
+      var first = true;
+      for (var lo = -180; lo <= 180; lo += 5) {
+        var p = project(lo*Math.PI/180, laR);
+        if (p.visible) {
+          if (first) { ctx.moveTo(p.x, p.y); first = false; }
+          else ctx.lineTo(p.x, p.y);
+        } else { first = true; }
+      }
+      ctx.stroke();
+    }
+    for (var lo2 = -180; lo2 < 180; lo2 += 30) {
+      var lo2R = lo2*Math.PI/180;
+      ctx.beginPath();
+      first = true;
+      for (var la2 = -90; la2 <= 90; la2 += 5) {
+        var p2 = project(lo2R, la2*Math.PI/180);
+        if (p2.visible) {
+          if (first) { ctx.moveTo(p2.x, p2.y); first = false; }
+          else ctx.lineTo(p2.x, p2.y);
+        } else { first = true; }
+      }
+      ctx.stroke();
+    }
+
+    continents.forEach(function(poly) {
+      ctx.beginPath();
+      var started = false;
+      poly.forEach(function(pt) {
+        var p = project(pt[0]*Math.PI/180, pt[1]*Math.PI/180);
+        if (!started) { ctx.moveTo(p.x, p.y); started = true; }
+        else ctx.lineTo(p.x, p.y);
+      });
+      ctx.closePath();
+      ctx.fillStyle = 'rgba(79,70,229,0.13)';
+      ctx.fill();
+      ctx.strokeStyle = 'rgba(79,70,229,0.35)';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    });
+
+    routes.forEach(function(rt) {
+      var a = byCode[rt[0]], b = byCode[rt[1]];
+      if (!a || !b) return;
+      var alon = a[1]*Math.PI/180, alat = a[2]*Math.PI/180;
+      var blon = b[1]*Math.PI/180, blat = b[2]*Math.PI/180;
+      ctx.beginPath();
+      var first = true;
+      for (var s = 0; s <= 1; s += 0.04) {
+        var mid = slerp([alon, alat], [blon, blat], s);
+        var p = project(mid[0], mid[1]);
+        if (p.visible) {
+          if (first) { ctx.moveTo(p.x, p.y); first = false; }
+          else ctx.lineTo(p.x, p.y);
+        } else { first = true; }
+      }
+      ctx.strokeStyle = 'rgba(79,70,229,0.15)';
+      ctx.lineWidth = 0.7;
+      ctx.stroke();
+    });
+
+    airports.forEach(function(a) {
+      var p = project(a[1]*Math.PI/180, a[2]*Math.PI/180);
+      if (!p.visible) return;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 2.5, 0, Math.PI*2);
+      ctx.fillStyle = INDIGO;
+      ctx.fill();
+      ctx.font = 'bold 7px Inter,sans-serif';
+      ctx.fillStyle = INDIGO;
+      ctx.fillText(a[0], p.x + 4, p.y - 3);
+    });
+
+    dots.forEach(function(d) {
+      d.t += d.speed;
+      if (d.t > 1) d.t = 0;
+      var pos = slerp(d.from, d.to, d.t);
+      var p = project(pos[0], pos[1]);
+      d.trail.push({p: p, t: Date.now()});
+      if (d.trail.length > 12) d.trail.shift();
+      d.trail.forEach(function(tp, idx) {
+        if (!tp.p.visible) return;
+        var alpha = (idx / d.trail.length) * 0.5;
+        ctx.beginPath();
+        ctx.arc(tp.p.x, tp.p.y, 1.2, 0, Math.PI*2);
+        ctx.fillStyle = 'rgba(79,70,229,' + alpha + ')';
+        ctx.fill();
+      });
+      if (p.visible) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 3.5, 0, Math.PI*2);
+        ctx.fillStyle = INDIGO;
+        ctx.fill();
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 5.5, 0, Math.PI*2);
+        ctx.strokeStyle = 'rgba(79,70,229,0.3)';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+      }
+    });
+
+    rot += 0.002;
+    requestAnimationFrame(draw);
+  }
+  draw();
+})();
+</script>
+</body>
+</html>
