@@ -71,7 +71,7 @@ module.exports = async function handler(req, res) {
     }
     try {
       const name = `cvs/${new Date().toISOString().slice(0, 10)}-${crypto.randomUUID()}.${ext}`;
-      const blob = await put(name, buf, { access: 'private', contentType: body.cv.type, addRandomSuffix: true });
+      const blob = await put(name, buf, { access: 'public', contentType: body.cv.type, addRandomSuffix: true });
       cv = { url: blob.url, filename: String(body.cv.name || '').slice(0, 200), type: body.cv.type, bytes: buf.length };
     } catch (e) {
       console.error('CV upload failed', e);
