@@ -6,7 +6,7 @@
 // Vercel environment variables (Project > Settings > Environment Variables):
 //   INTAKE_WEBHOOK_URL     webhook URL from the ATM-R Intake routine panel
 //   INTAKE_WEBHOOK_KEY     sender key from the same panel
-//   BLOB_READ_WRITE_TOKEN  added automatically when a Vercel Blob store is connected
+//   BLOB2_READ_WRITE_TOKEN  added automatically when a Vercel Blob store is connected
 // Remove the old Telegram variables (bot token, chat ID).
 //
 // Dependency: npm install @vercel/blob
@@ -71,7 +71,7 @@ module.exports = async function handler(req, res) {
     }
     try {
       const name = `cvs/${new Date().toISOString().slice(0, 10)}-${crypto.randomUUID()}.${ext}`;
-      const blob = await put(name, buf, { access: 'public', contentType: body.cv.type, addRandomSuffix: true });
+      const blob = await put(name, buf, { access: 'public', contentType: body.cv.type, addRandomSuffix: true, token: process.env.BLOB2_READ_WRITE_TOKEN });
       cv = { url: blob.url, filename: String(body.cv.name || '').slice(0, 200), type: body.cv.type, bytes: buf.length };
     } catch (e) {
       console.error('CV upload failed', e);
