@@ -783,6 +783,9 @@ footer{
           <h3>Create Your Candidate Profile</h3>
           <p style="font-size:.82rem;color:var(--text-300);margin-bottom:22px">Takes less than 2 minutes. No payment required.</p>
           <form id="cform" onsubmit="return false">
+            <div style="position:absolute;left:-9999px" aria-hidden="true">
+              <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+            </div>
             <div class="form-grid">
               <div class="field"><label>First Name</label><input type="text" name="fname" placeholder="Sarah" required></div>
               <div class="field"><label>Last Name</label><input type="text" name="lname" placeholder="Mitchell" required></div>
@@ -796,6 +799,8 @@ footer{
                   <option value="">Select your discipline…</option>
                   <option>Air Traffic Controller</option>
                   <option>ATM Engineer</option>
+                  <option>ATSEP / CNS Engineer</option>
+                  <option>Verification and Validation / Test Engineer</option>
                   <option>Airspace Designer</option>
                   <option>Procedure Designer</option>
                   <option>Systems Specialist</option>
@@ -818,9 +823,33 @@ footer{
                 </select>
               </div>
             </div>
-            <div class="form-grid">
-              <div class="field"><label>Country</label><input type="text" name="country" placeholder="Australia"></div>
+            <div class="form-grid full">
+              <div class="field"><label>Country</label>
+                <select name="country" required>
+                  <option value="">Select your country…</option>
+                  <option>Afghanistan</option><option>Albania</option><option>Algeria</option><option>Andorra</option><option>Angola</option><option>Antigua and Barbuda</option><option>Argentina</option><option>Armenia</option><option>Australia</option><option>Austria</option><option>Azerbaijan</option><option>Bahamas</option><option>Bahrain</option><option>Bangladesh</option><option>Barbados</option><option>Belarus</option><option>Belgium</option><option>Belize</option><option>Benin</option><option>Bhutan</option><option>Bolivia</option><option>Bosnia and Herzegovina</option><option>Botswana</option><option>Brazil</option><option>Brunei</option><option>Bulgaria</option><option>Burkina Faso</option><option>Burundi</option><option>Cabo Verde</option><option>Cambodia</option><option>Cameroon</option><option>Canada</option><option>Central African Republic</option><option>Chad</option><option>Chile</option><option>China</option><option>Colombia</option><option>Comoros</option><option>Congo</option><option>Costa Rica</option><option>Croatia</option><option>Cuba</option><option>Cyprus</option><option>Czech Republic</option><option>Denmark</option><option>Djibouti</option><option>Dominica</option><option>Dominican Republic</option><option>Ecuador</option><option>Egypt</option><option>El Salvador</option><option>Equatorial Guinea</option><option>Eritrea</option><option>Estonia</option><option>Eswatini</option><option>Ethiopia</option><option>Fiji</option><option>Finland</option><option>France</option><option>Gabon</option><option>Gambia</option><option>Georgia</option><option>Germany</option><option>Ghana</option><option>Greece</option><option>Grenada</option><option>Guatemala</option><option>Guinea</option><option>Guinea-Bissau</option><option>Guyana</option><option>Haiti</option><option>Honduras</option><option>Hungary</option><option>Iceland</option><option>India</option><option>Indonesia</option><option>Iran</option><option>Iraq</option><option>Ireland</option><option>Israel</option><option>Italy</option><option>Jamaica</option><option>Japan</option><option>Jordan</option><option>Kazakhstan</option><option>Kenya</option><option>Kiribati</option><option>Kuwait</option><option>Kyrgyzstan</option><option>Laos</option><option>Latvia</option><option>Lebanon</option><option>Lesotho</option><option>Liberia</option><option>Libya</option><option>Liechtenstein</option><option>Lithuania</option><option>Luxembourg</option><option>Madagascar</option><option>Malawi</option><option>Malaysia</option><option>Maldives</option><option>Mali</option><option>Malta</option><option>Marshall Islands</option><option>Mauritania</option><option>Mauritius</option><option>Mexico</option><option>Micronesia</option><option>Moldova</option><option>Monaco</option><option>Mongolia</option><option>Montenegro</option><option>Morocco</option><option>Mozambique</option><option>Myanmar</option><option>Namibia</option><option>Nauru</option><option>Nepal</option><option>Netherlands</option><option>New Zealand</option><option>Nicaragua</option><option>Niger</option><option>Nigeria</option><option>North Korea</option><option>North Macedonia</option><option>Norway</option><option>Oman</option><option>Pakistan</option><option>Palau</option><option>Panama</option><option>Papua New Guinea</option><option>Paraguay</option><option>Peru</option><option>Philippines</option><option>Poland</option><option>Portugal</option><option>Qatar</option><option>Romania</option><option>Russia</option><option>Rwanda</option><option>Saint Kitts and Nevis</option><option>Saint Lucia</option><option>Saint Vincent and the Grenadines</option><option>Samoa</option><option>San Marino</option><option>Sao Tome and Principe</option><option>Saudi Arabia</option><option>Senegal</option><option>Serbia</option><option>Seychelles</option><option>Sierra Leone</option><option>Singapore</option><option>Slovakia</option><option>Slovenia</option><option>Solomon Islands</option><option>Somalia</option><option>South Africa</option><option>South Korea</option><option>South Sudan</option><option>Spain</option><option>Sri Lanka</option><option>Sudan</option><option>Suriname</option><option>Sweden</option><option>Switzerland</option><option>Syria</option><option>Taiwan</option><option>Tajikistan</option><option>Tanzania</option><option>Thailand</option><option>Timor-Leste</option><option>Togo</option><option>Tonga</option><option>Trinidad and Tobago</option><option>Tunisia</option><option>Turkey</option><option>Turkmenistan</option><option>Tuvalu</option><option>Uganda</option><option>Ukraine</option><option>United Arab Emirates</option><option>United Kingdom</option><option>United States</option><option>Uruguay</option><option>Uzbekistan</option><option>Vanuatu</option><option>Vatican City</option><option>Venezuela</option><option>Vietnam</option><option>Yemen</option><option>Zambia</option><option>Zimbabwe</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-grid full">
               <div class="field"><label>Phone (optional)</label><input type="tel" name="phone" placeholder="+61 4xx xxx xxx"></div>
+            </div>
+            <div class="form-grid full">
+              <div class="field"><label>LinkedIn profile (optional)</label><input type="url" name="linkedin" placeholder="https://www.linkedin.com/in/…"></div>
+            </div>
+            <div class="form-grid">
+              <div class="field"><label>Open to relocation? (optional)</label>
+                <select name="relocation">
+                  <option value="">Select…</option>
+                  <option>Yes</option>
+                  <option>No</option>
+                  <option>Depends on the role</option>
+                </select>
+              </div>
+              <div class="field"><label>Key ATM systems worked on (optional)</label><input type="text" name="systems" placeholder="e.g. TopSky, AMHS, surveillance"></div>
+            </div>
+            <div class="form-grid full">
+              <div class="field"><label>CV (optional, PDF or Word, max 3 MB)</label><input type="file" name="cv" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"></div>
             </div>
             <div style="margin:14px 0 18px;display:flex;align-items:flex-start;gap:10px">
               <input type="checkbox" id="c-consent" name="consent" required style="margin-top:3px;flex-shrink:0;accent-color:var(--indigo)">
@@ -828,7 +857,7 @@ footer{
             </div>
             <button type="submit" class="btn-submit" id="csubmit">Create My Profile →</button>
             <div class="reg-form-note">No spam. No payment required.</div>
-            <div class="form-ok" id="cok">✓ Profile received! We'll be in touch within 2 business days.</div>
+            <div class="form-ok" id="cok">✓ Profile received! We'll be in touch within 2 business days.<br><small style="font-weight:400;color:#16a34a">No CV attached? Email it to <a href="mailto:support@atm-r.com" style="color:#16a34a">support@atm-r.com</a> any time.</small></div>
             <div class="form-err" id="cerr">Something went wrong. Please try again or email us directly.</div>
           </form>
         </div>
@@ -837,6 +866,9 @@ footer{
           <h3>Register as an Employer</h3>
           <p style="font-size:.82rem;color:var(--text-300);margin-bottom:22px">Tell us what you need and we'll find the right people.</p>
           <form id="eform" onsubmit="return false">
+            <div style="position:absolute;left:-9999px" aria-hidden="true">
+              <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+            </div>
             <div class="form-grid">
               <div class="field"><label>Company Name</label><input type="text" name="company" placeholder="Skyway Airlines" required></div>
               <div class="field"><label>Contact Name</label><input type="text" name="contact" placeholder="John Brown" required></div>
@@ -846,7 +878,12 @@ footer{
               <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="+1 555 000 0000"></div>
             </div>
             <div class="form-grid">
-              <div class="field"><label>Country</label><input type="text" name="country" placeholder="Australia"></div>
+              <div class="field"><label>Country</label>
+                <select name="country" required>
+                  <option value="">Select your country…</option>
+                  <option>Afghanistan</option><option>Albania</option><option>Algeria</option><option>Andorra</option><option>Angola</option><option>Antigua and Barbuda</option><option>Argentina</option><option>Armenia</option><option>Australia</option><option>Austria</option><option>Azerbaijan</option><option>Bahamas</option><option>Bahrain</option><option>Bangladesh</option><option>Barbados</option><option>Belarus</option><option>Belgium</option><option>Belize</option><option>Benin</option><option>Bhutan</option><option>Bolivia</option><option>Bosnia and Herzegovina</option><option>Botswana</option><option>Brazil</option><option>Brunei</option><option>Bulgaria</option><option>Burkina Faso</option><option>Burundi</option><option>Cabo Verde</option><option>Cambodia</option><option>Cameroon</option><option>Canada</option><option>Central African Republic</option><option>Chad</option><option>Chile</option><option>China</option><option>Colombia</option><option>Comoros</option><option>Congo</option><option>Costa Rica</option><option>Croatia</option><option>Cuba</option><option>Cyprus</option><option>Czech Republic</option><option>Denmark</option><option>Djibouti</option><option>Dominica</option><option>Dominican Republic</option><option>Ecuador</option><option>Egypt</option><option>El Salvador</option><option>Equatorial Guinea</option><option>Eritrea</option><option>Estonia</option><option>Eswatini</option><option>Ethiopia</option><option>Fiji</option><option>Finland</option><option>France</option><option>Gabon</option><option>Gambia</option><option>Georgia</option><option>Germany</option><option>Ghana</option><option>Greece</option><option>Grenada</option><option>Guatemala</option><option>Guinea</option><option>Guinea-Bissau</option><option>Guyana</option><option>Haiti</option><option>Honduras</option><option>Hungary</option><option>Iceland</option><option>India</option><option>Indonesia</option><option>Iran</option><option>Iraq</option><option>Ireland</option><option>Israel</option><option>Italy</option><option>Jamaica</option><option>Japan</option><option>Jordan</option><option>Kazakhstan</option><option>Kenya</option><option>Kiribati</option><option>Kuwait</option><option>Kyrgyzstan</option><option>Laos</option><option>Latvia</option><option>Lebanon</option><option>Lesotho</option><option>Liberia</option><option>Libya</option><option>Liechtenstein</option><option>Lithuania</option><option>Luxembourg</option><option>Madagascar</option><option>Malawi</option><option>Malaysia</option><option>Maldives</option><option>Mali</option><option>Malta</option><option>Marshall Islands</option><option>Mauritania</option><option>Mauritius</option><option>Mexico</option><option>Micronesia</option><option>Moldova</option><option>Monaco</option><option>Mongolia</option><option>Montenegro</option><option>Morocco</option><option>Mozambique</option><option>Myanmar</option><option>Namibia</option><option>Nauru</option><option>Nepal</option><option>Netherlands</option><option>New Zealand</option><option>Nicaragua</option><option>Niger</option><option>Nigeria</option><option>North Korea</option><option>North Macedonia</option><option>Norway</option><option>Oman</option><option>Pakistan</option><option>Palau</option><option>Panama</option><option>Papua New Guinea</option><option>Paraguay</option><option>Peru</option><option>Philippines</option><option>Poland</option><option>Portugal</option><option>Qatar</option><option>Romania</option><option>Russia</option><option>Rwanda</option><option>Saint Kitts and Nevis</option><option>Saint Lucia</option><option>Saint Vincent and the Grenadines</option><option>Samoa</option><option>San Marino</option><option>Sao Tome and Principe</option><option>Saudi Arabia</option><option>Senegal</option><option>Serbia</option><option>Seychelles</option><option>Sierra Leone</option><option>Singapore</option><option>Slovakia</option><option>Slovenia</option><option>Solomon Islands</option><option>Somalia</option><option>South Africa</option><option>South Korea</option><option>South Sudan</option><option>Spain</option><option>Sri Lanka</option><option>Sudan</option><option>Suriname</option><option>Sweden</option><option>Switzerland</option><option>Syria</option><option>Taiwan</option><option>Tajikistan</option><option>Tanzania</option><option>Thailand</option><option>Timor-Leste</option><option>Togo</option><option>Tonga</option><option>Trinidad and Tobago</option><option>Tunisia</option><option>Turkey</option><option>Turkmenistan</option><option>Tuvalu</option><option>Uganda</option><option>Ukraine</option><option>United Arab Emirates</option><option>United Kingdom</option><option>United States</option><option>Uruguay</option><option>Uzbekistan</option><option>Vanuatu</option><option>Vatican City</option><option>Venezuela</option><option>Vietnam</option><option>Yemen</option><option>Zambia</option><option>Zimbabwe</option>
+                </select>
+              </div>
               <div class="field"><label>Operation Type</label>
                 <select name="optype">
                   <option value="">Select…</option>
@@ -892,6 +929,9 @@ footer{
     <div class="contact-form-wrap">
       <h3>Send us a Message</h3>
       <form id="contactform" onsubmit="return false">
+        <div style="position:absolute;left:-9999px" aria-hidden="true">
+          <label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        </div>
         <div class="form-grid">
           <div class="field"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
           <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@email.com" required></div>
@@ -1038,30 +1078,47 @@ footer{
 </div>
 
 <script>
-/* ── TELEGRAM ─────────────────────────────────────────────── */
-async function sendTelegram(text, btnEl, okEl, errEl) {
+/* ── FORM SENDER ──────────────────────────────────────────── */
+var PAGE_LOADED_AT = Date.now();
+
+async function sendForm(text, btnEl, okEl, errEl, extra) {
   btnEl.disabled = true;
   btnEl.textContent = 'Sending…';
   try {
+    var form = btnEl.closest('form');
+    var body = Object.assign({
+      text: text,
+      website: (form.querySelector('[name=website]') || {}).value || '',
+      started_at: PAGE_LOADED_AT
+    }, extra || {});
     const r = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text: text })
+      body: JSON.stringify(body)
     });
     const d = await r.json();
     if (r.ok && d.ok) {
-      btnEl.closest('form').reset();
+      form.reset();
       okEl.style.display = 'block';
       btnEl.style.display = 'none';
     } else {
       throw new Error(d.error || 'Submission error');
     }
-  } catch(e) {
+  } catch (e) {
     console.error(e);
-    if (errEl) errEl.style.display = 'block';
+    if (errEl) { errEl.textContent = (e.message && e.message.indexOf('CV') === 0) ? e.message : 'Something went wrong. Please try again or email us directly.'; errEl.style.display = 'block'; }
     btnEl.disabled = false;
     btnEl.textContent = btnEl.dataset.label;
   }
+}
+
+function readFileB64(file) {
+  return new Promise(function (resolve, reject) {
+    var fr = new FileReader();
+    fr.onload = function () { resolve(String(fr.result).split(',')[1]); };
+    fr.onerror = reject;
+    fr.readAsDataURL(file);
+  });
 }
 
 /* ── FORMS ────────────────────────────────────────────────── */
@@ -1079,10 +1136,18 @@ document.addEventListener('DOMContentLoaded', function() {
         + 'Country: ' + (d.get('country')||'N/A') + '\n'
         + 'Discipline: ' + (d.get('role')||'N/A') + '\n'
         + 'Experience: ' + (d.get('experience')||'N/A') + '\n'
+        + 'LinkedIn: ' + (d.get('linkedin')||'N/A') + '\n'
+        + 'Relocation: ' + (d.get('relocation')||'N/A') + '\n'
+        + 'Systems: ' + (d.get('systems')||'N/A') + '\n'
         + 'Consent: Yes';
       var btn = document.getElementById('csubmit');
       btn.dataset.label = btn.textContent;
-      sendTelegram(text, btn, document.getElementById('cok'), document.getElementById('cerr'));
+      var file = cform.querySelector('[name=cv]') && cform.querySelector('[name=cv]').files[0];
+      if (file && file.size > 3 * 1024 * 1024) { alert('Please attach a CV under 3 MB, or email it to support@atm-r.com.'); return; }
+      (file ? readFileB64(file) : Promise.resolve(null)).then(function (data) {
+        var extra = data ? { cv: { name: file.name, type: file.type, data: data } } : {};
+        sendForm(text, btn, document.getElementById('cok'), document.getElementById('cerr'), extra);
+      });
     });
   }
 
@@ -1101,7 +1166,7 @@ document.addEventListener('DOMContentLoaded', function() {
         + 'Roles: ' + (d.get('roles')||'N/A');
       var btn = document.getElementById('esubmit');
       btn.dataset.label = btn.textContent;
-      sendTelegram(text, btn, document.getElementById('eok'), document.getElementById('eerr'));
+      sendForm(text, btn, document.getElementById('eok'), document.getElementById('eerr'));
     });
   }
 
@@ -1116,7 +1181,7 @@ document.addEventListener('DOMContentLoaded', function() {
         + 'Message: ' + (d.get('message')||'');
       var btn = document.getElementById('ctsubmit');
       btn.dataset.label = btn.textContent;
-      sendTelegram(text, btn, document.getElementById('ctok'), document.getElementById('cterr'));
+      sendForm(text, btn, document.getElementById('ctok'), document.getElementById('cterr'));
     });
   }
 
