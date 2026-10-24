@@ -1,96 +1,112 @@
-// Simple in-memory rate limiter (resets per cold start, good enough for Vercel serverless)
-const rateMap = new Map();
-const RATE_LIMIT = 5;       // max submissions
-const RATE_WINDOW = 60000;  // per 60 seconds
+// api/contact.js: Vercel serverless function for atm-r.com
+// Replaces the Telegram forwarder. Sends every form submission to the
+// ATM-R Intake webhook, stores an optional candidate CV in Vercel Blob,
+// and drops spam.
+//
+// Vercel environment variables (Project > Settings > Environment Variables):
+//   INTAKE_WEBHOOK_URL     webhook URL from the ATM-R Intake routine panel
+//   INTAKE_WEBHOOK_KEY     sender key from the same panel
+//   BLOB_READ_WRITE_TOKEN  added automatically when a Vercel Blob store is connected
+// Remove the old Telegram variables (bot token, chat ID).
+//
+// Dependency: npm install @vercel/blob
 
-function isRateLimited(ip) {
-  const now = Date.now();
-  const entry = rateMap.get(ip) || { count: 0, start: now };
-  if (now - entry.start > RATE_WINDOW) {
-    rateMap.set(ip, { count: 1, start: now });
-    return false;
-  }
-  entry.count++;
-  rateMap.set(ip, entry);
-  return entry.count > RATE_LIMIT;
+const { put } = require('@vercel/blob');
+const crypto = require('crypto');
+
+const MAX_TEXT = 4000;
+const MAX_CV_BYTES = 3 * 1024 * 1024; // 3 MB (Vercel request body limit is 4.5 MB)
+const MIN_FILL_MS = 3000;             // humans take longer than 3 seconds
+const CV_TYPES = {
+  'application/pdf': 'pdf',
+  'application/msword': 'doc',
+  'application/vnd.openxmlformats-officedocument.wordprocessingml.document': 'docx'
+};
+
+function formType(text) {
+  const first = (text.split('\n')[0] || '').toUpperCase();
+  if (first.includes('CANDIDATE REGISTRATION')) return 'candidate';
+  if (first.includes('EMPLOYER REGISTRATION')) return 'employer';
+  if (first.includes('CONTACT ENQUIRY')) return 'contact';
+  return 'unknown';
 }
 
-// Strip HTML tags to prevent injection into Telegram HTML parse_mode
-function stripHtml(str) {
-  return str.replace(/<[^>]*>/g, '').replace(/&/g, '&amp;');
-}
+// Pretend success to bots so they don't retry.
+const fakeOk = (res) => res.status(200).json({ ok: true });
 
-export default async function handler(req, res) {
-  // Security headers
-  res.setHeader('X-Content-Type-Options', 'nosniff');
-  res.setHeader('X-Frame-Options', 'DENY');
-  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
-
-  // Restrict CORS to the production domain only
-  const origin = req.headers.origin || '';
-  const allowed = ['https://www.atm-r.com', 'https://atm-r.com', 'https://atm-r-1-2.vercel.app'];
-  if (allowed.includes(origin)) {
-    res.setHeader('Access-Control-Allow-Origin', origin);
-  }
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-
-  if (req.method === 'OPTIONS') return res.status(200).end();
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-
-  // Rate limiting by IP
-  const ip = req.headers['x-forwarded-for']?.split(',')[0].trim() || req.socket?.remoteAddress || 'unknown';
-  if (isRateLimited(ip)) {
-    return res.status(429).json({ error: 'Too many requests — please wait a moment and try again.' });
+module.exports = async function handler(req, res) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).json({ ok: false, error: 'Method not allowed' });
   }
 
-  // Validate content-type
-  const ct = req.headers['content-type'] || '';
-  if (!ct.includes('application/json')) {
-    return res.status(415).json({ error: 'Unsupported content type' });
+  let body = req.body;
+  if (typeof body === 'string') { try { body = JSON.parse(body); } catch { body = {}; } }
+  body = body || {};
+
+  // Spam trap 1: hidden field that people never see or fill in.
+  if (body.website) return fakeOk(res);
+  // Spam trap 2: form submitted too fast after the page loaded.
+  const started = Number(body.started_at || 0);
+  if (!started || Date.now() - started < MIN_FILL_MS) return fakeOk(res);
+
+  const text = typeof body.text === 'string' ? body.text.trim() : '';
+  const type = text && text.length <= MAX_TEXT ? formType(text) : 'unknown';
+  if (type === 'unknown') return res.status(400).json({ ok: false, error: 'Invalid submission' });
+
+  const url = process.env.INTAKE_WEBHOOK_URL;
+  const key = process.env.INTAKE_WEBHOOK_KEY;
+  if (!url || !key) {
+    console.error('Intake webhook is not configured');
+    return res.status(500).json({ ok: false, error: 'Submission error' });
   }
 
-  const { text } = req.body || {};
-  if (!text || typeof text !== 'string' || text.trim().length === 0) {
-    return res.status(400).json({ error: 'Missing message text' });
-  }
-  if (text.length > 4000) {
-    return res.status(400).json({ error: 'Message too long' });
+  // Optional CV (candidate form only).
+  let cv = null;
+  if (type === 'candidate' && body.cv && body.cv.data) {
+    const ext = CV_TYPES[body.cv.type];
+    const buf = Buffer.from(String(body.cv.data), 'base64');
+    if (!ext || buf.length === 0 || buf.length > MAX_CV_BYTES) {
+      return res.status(400).json({ ok: false, error: 'CV must be a PDF or Word file under 3 MB' });
+    }
+    try {
+      const name = `cvs/${new Date().toISOString().slice(0, 10)}-${crypto.randomUUID()}.${ext}`;
+      const blob = await put(name, buf, { access: 'public', contentType: body.cv.type, addRandomSuffix: true });
+      cv = { url: blob.url, filename: String(body.cv.name || '').slice(0, 200), type: body.cv.type, bytes: buf.length };
+    } catch (e) {
+      console.error('CV upload failed', e);
+      cv = { error: 'upload_failed', filename: String(body.cv.name || '').slice(0, 200) };
+    }
   }
 
-  const token  = process.env.TG_BOT;
-  const chatId = process.env.TG_CHAT;
-
-  if (!token || !chatId) {
-    console.error('ENV MISSING — TG_BOT:', !!token, 'TG_CHAT:', !!chatId);
-    return res.status(500).json({ error: 'Server configuration error' });
-  }
+  const payload = {
+    source: 'atm-r.com',
+    form_type: type,                 // candidate | employer | contact
+    submitted_at: new Date().toISOString(),
+    text,                            // same multi-line format as the old Telegram alert
+    cv                               // null, { url, filename, type, bytes }, or { error, filename }
+  };
 
   try {
-    const safeText = stripHtml(text).substring(0, 4000);
-    const tgRes = await fetch(
-      `https://api.telegram.org/bot${token}/sendMessage`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: safeText,
-          parse_mode: 'HTML',
-        }),
-      }
-    );
-
-    const data = await tgRes.json();
-
-    if (!tgRes.ok || !data.ok) {
-      console.error('Telegram API error:', JSON.stringify(data));
-      return res.status(502).json({ error: 'Submission failed' });
+    const r = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        // Match the header name and format shown with the sender key in the routine panel.
+        'Authorization': 'Bearer ' + key
+      },
+      body: JSON.stringify(payload)
+    });
+    if (!r.ok) {
+      console.error('Intake webhook returned', r.status);
+      return res.status(502).json({ ok: false, error: 'Submission error' });
     }
-
     return res.status(200).json({ ok: true });
   } catch (e) {
-    console.error('Fetch exception:', e.message);
-    return res.status(500).json({ error: 'Internal server error' });
+    console.error('Intake webhook failed', e);
+    return res.status(502).json({ ok: false, error: 'Submission error' });
   }
-}
+};
+
+// Only used if this runs under Next.js; plain Vercel functions already allow 4.5 MB.
+module.exports.config = { api: { bodyParser: { sizeLimit: '4.5mb' } } };
